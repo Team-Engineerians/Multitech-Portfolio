@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="relative w-full max-w-6xl mx-auto mb-8 h-12 flex items-center justify-between px-4">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <img src="/navbar-logo.svg" alt="Logo" className="w-full h-full" />
+        <Image src="/navbar-logo.svg" alt="Logo" width={200} height={200} />
       </div>
 
       {/* Center Nav Links */}
