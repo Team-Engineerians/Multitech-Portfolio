@@ -1,5 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import { FlipWords } from "./components/ui/flip-words";
+
+const words = ["Connecting Talent", "Videsh Jayein"];
+const wordsdown = ["Empowering Careers", "Paisa Kamaye"];
 
 const Home: React.FC = () => {
   return (
@@ -24,10 +28,12 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* Hero Text */}
+      {/* Hero Text with FlipWords */}
       <div className="text-center z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-4">
-          Connecting Talent, <br /> Empowering Carrers.
+          <FlipWords words={words} />
+          <br />
+          <FlipWords words={wordsdown} />
         </h1>
         <p className="text-gray-600 text-lg">
           Unlock Global Opportunities with Expert Manpower Solutions
