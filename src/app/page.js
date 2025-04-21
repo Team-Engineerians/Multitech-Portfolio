@@ -45,7 +45,7 @@ export default function Home() {
 
       {/* Floating Icons */}
       <div className="absolute left-10 top-56 z-10 space-y-4">
-        <Image src="/visa.png" alt="Visa" width={240} height={240} />
+        <Image src="/visa.png" alt="Visa" width={240} height={260} />
         <Image src="/coin.png" alt="Dollar" width={240} height={240} />
       </div>
       <div className="absolute right-10 top-56 z-10 space-y-4 flex flex-col items-end">
