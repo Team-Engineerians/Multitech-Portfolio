@@ -1,8 +1,8 @@
 import React from "react";
 import { FlipWords } from "./ui/flip-words";
 
-const words = ["Workforce,", "Videsh Jaye", "اذهب إلى الخارج"];
-const wordsdown = ["Without Borders.", "Paise Kamaye", "واكسب المال"];
+const words = ["Workforce,", "Videsh Jaye,", "اذهب إلى الخارج"];
+const wordsdown = ["Without Borders.", "Paise Kamaye.", "واكسب المال"];
 
 const HeroSection = () => {
   return (
