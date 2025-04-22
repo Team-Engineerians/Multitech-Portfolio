@@ -91,36 +91,40 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-screen h-[950px] bg-white py-20 px-8">
-        <div className="flex flex-col md:flex-row justify-center gap-24 max-w-6xl mx-auto">
-          {/* Vision */}
-          <div className="md:w-1/3 mt-20 md:mt-20 md:self-start pl-0 md:pl-0">
-            <h2 className="text-3xl font-semibold mb-6 text-left">Vision</h2>
-            <p className="text-lg text-gray-700 text-left">
-              To deliver unmatched quality through expert training and testing,
-              building futures rooted in skill and excellence.
-            </p>
-          </div>
+      <div className="w-screen">
+  {/* Top Orange Strip */}
+<div className="w-full h-[14px] bg-orange-500" />
 
-          {/* Replace Globe Image with GlobeDemo */}
-          <div className="md:w-1/3 flex justify-center">
-            <div className="w-[1000px] h-[800px]">
-              <GlobeDemo />
-            </div>
-          </div>
+{/* Vision + Globe + Mission Section */}
+<div className="bg-white py-32 px-4 md:px-12 lg:px-24">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative">
 
-          {/* Mission */}
-          <div className="md:w-1/3 mb-20 md:mb-40 md:self-end">
-            <h2 className="text-3xl font-semibold mb-6 text-center md:text-right">
-              Mission
-            </h2>
-            <p className="text-lg text-gray-700 text-center md:text-right">
-              To create lasting impact through effective placements, value-added
-              services, and a focus on empowering people and industries alike.
-            </p>
-          </div>
-        </div>
-      </div>
+    {/* Vision */}
+    <div className="md:w-1/3 text-left self-start mt-5">
+      <h2 className="text-3xl font-bold text-black mb-4">Vision</h2>
+      <p className="text-gray-600 text-lg leading-relaxed">
+        To deliver unmatched quality through expert training and testing, building futures rooted <br /> in skill and excellence.
+      </p>
+    </div>
+
+    {/* Globe */}
+    <div className="w-full md:w-[576px] h-[508px] flex justify-center items-center">
+      <GlobeDemo />
+    </div>
+
+    {/* Mission */}
+    <div className="md:w-1/3 text-left md:text-right self-end mb-25">
+      <h2 className="text-3xl font-bold text-black mb-4">Mission</h2>
+      <p className="text-gray-600 text-lg leading-relaxed">
+        To create lasting impact through effective placements, value-added services, and a focus on empowering people and <br /> industries alike.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
     </>
   );
 };
