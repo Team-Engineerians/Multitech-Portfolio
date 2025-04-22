@@ -91,14 +91,12 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-screen h-[360px] bg-white py-20 px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-6xl mx-auto">
+      <div className="w-screen h-[950px] bg-white py-20 px-8">
+        <div className="flex flex-col md:flex-row justify-center gap-24 max-w-6xl mx-auto">
           {/* Vision */}
-          <div className="md:w-1/3 mt-10 md:mt-10 md:self-start">
-            <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
-              Vision
-            </h2>
-            <p className="text-gray-700 text-center md:text-left">
+          <div className="md:w-1/3 mt-20 md:mt-20 md:self-start pl-0 md:pl-0">
+            <h2 className="text-3xl font-semibold mb-6 text-left">Vision</h2>
+            <p className="text-lg text-gray-700 text-left">
               To deliver unmatched quality through expert training and testing,
               building futures rooted in skill and excellence.
             </p>
@@ -106,17 +104,17 @@ const AboutUs = () => {
 
           {/* Replace Globe Image with GlobeDemo */}
           <div className="md:w-1/3 flex justify-center">
-            <div className="w-[320px] h-[320px]">
+            <div className="w-[1000px] h-[800px]">
               <GlobeDemo />
             </div>
           </div>
 
           {/* Mission */}
-          <div className="md:w-1/3 mb-10 md:mb-20 md:self-end">
-            <h2 className="text-2xl font-semibold mb-4 text-center md:text-right">
+          <div className="md:w-1/3 mb-20 md:mb-40 md:self-end">
+            <h2 className="text-3xl font-semibold mb-6 text-center md:text-right">
               Mission
             </h2>
-            <p className="text-gray-700 text-center md:text-right">
+            <p className="text-lg text-gray-700 text-center md:text-right">
               To create lasting impact through effective placements, value-added
               services, and a focus on empowering people and industries alike.
             </p>
