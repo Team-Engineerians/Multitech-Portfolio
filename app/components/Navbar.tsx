@@ -6,19 +6,26 @@ const Navbar = () => {
     <div className="relative w-full max-w-6xl mx-auto mb-8 h-8 flex items-center justify-between px-4">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <Image src="/navbar-logo.svg" alt="Logo" width={200} height={200} />
+        <a href="#top">
+          <Image src="/navbar-logo.svg" alt="Logo" width={200} height={200} />
+        </a>
       </div>
 
       {/* Center Nav Links */}
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div className="flex gap-6 sm:gap-10 text-md font-medium text-gray-800">
-          {["About", "Services", "Career", "Gallery"].map((link, index) => (
+          {[
+            { name: "About", href: "#about" },    // ✅ Fixed
+            { name: "Services", href: "#services" },
+            { name: "Career", href: "#career" },
+            { name: "Gallery", href: "#gallery" },
+          ].map((link, index) => (
             <a
               key={index}
-              href="#"
+              href={link.href}
               className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full hover:text-orange-500"
             >
-              {link}
+              {link.name}
             </a>
           ))}
         </div>
