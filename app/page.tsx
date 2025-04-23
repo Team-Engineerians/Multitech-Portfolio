@@ -8,6 +8,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import StatsCards from "./components/StatsCards";
 import { ArrowUp } from "lucide-react";
+import WhatWeDo from "./components/services";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -47,6 +48,9 @@ export default function Home() {
           <ArrowUp className="w-5 h-5" />
         </button>
       )}
+      <section id="services">
+        <WhatWeDo />
+      </section>
     </div>
   );
 }
