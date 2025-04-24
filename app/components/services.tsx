@@ -125,72 +125,101 @@
 // }
 
 import React from "react";
+import { GlobeDemo } from "./globeDemo";
 
 export default function WhatWeDo() {
   return (
-    <div className="bg-[#E1ECF7] w-screen h-[907px] py-16 px-4 font-sans text-gray-800 flex justify-center">
-      <div className="max-w-[1200px] w-full mx-auto">
-        <h2 className="text-3xl md:text-4xl mt-10 font-bold text-center mb-2 text-gray-900">
-          What we do
-        </h2>
-        <p className="text-center text-gray-600 mb-12">
-          Comprehensive Manpower & Support Services
-        </p>
+    <div className="font-sans text-gray-800">
+      {/* What We Do Section */}
+      <section className="bg-[#E1ECF7] w-screen h-[907px] py-16 px-4 flex justify-center">
+        <div className="max-w-[1200px] w-full mx-auto">
+          <h2 className="text-3xl md:text-4xl mt-10 font-bold text-center mb-2 text-gray-900">
+            What we do
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Comprehensive Manpower & Support Services
+          </p>
 
-        {/* Row 1 */}
-        <div className="w-[1191px] flex gap-6">
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-[356px] h-[285px]">
-            <img
-              src="pic1.png"
-              alt="Service 1"
-              className="w-full h-full object-cover"
-            />
+          {/* Row 1 */}
+          <div className="flex gap-6 justify-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[356px] h-[285px]">
+              <img
+                src="pic1.png"
+                alt="Service 1"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[353px] h-[285px]">
+              <img
+                src="pic2.png"
+                alt="Service 2"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[450px] h-[285px]">
+              <img
+                src="pic3.png"
+                alt="Service 3"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-[353px] h-[285px]">
-            <img
-              src="pic2.png"
-              alt="Service 2"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-[450px] h-[285px]">
-            <img
-              src="pic3.png"
-              alt="Service 3"
-              className="w-full h-full object-cover"
-            />
+          {/* Row 2 */}
+          <div className="flex gap-6 justify-center mt-6">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px]">
+              <img
+                src="pic4.png"
+                alt="Service 4"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[603px] h-[346px]">
+              <img
+                src="pic5.png"
+                alt="Service 5"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px]">
+              <img
+                src="pic6.png"
+                alt="Service 6"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Row 2 */}
-        <div className="w-[1191px] flex gap-6 mt-6">
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px]">
-            <img
-              src="pic4.png"
-              alt="Service 4"
-              className="w-full h-full object-cover"
-            />
+      {/* Vision + Globe + Mission Section */}
+      <section className="bg-white py-32 px-4 md:px-12 lg:px-24">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Vision */}
+          <div className="md:w-1/3 text-left self-start mt-5">
+            <h2 className="text-3xl font-bold text-black mb-4">Vision</h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              To deliver unmatched quality through expert training and testing,
+              building futures rooted <br /> in skill and excellence.
+            </p>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-[603px] h-[346px]">
-            <img
-              src="pic5.png"
-              alt="Service 5"
-              className="w-full h-full object-cover"
-            />
+          {/* Globe */}
+          <div className="w-full md:w-[576px] h-[508px] flex justify-center items-center">
+            <GlobeDemo />
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px]">
-            <img
-              src="pic6.png"
-              alt="Service 6"
-              className="w-full h-full object-cover"
-            />
+          {/* Mission */}
+          <div className="md:w-1/3 text-left md:text-right self-end">
+            <h2 className="text-3xl font-bold text-black mb-4">Mission</h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              To create lasting impact through effective placements, value-added
+              services, and a focus on empowering people and <br /> industries
+              alike.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
