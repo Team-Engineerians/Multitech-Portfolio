@@ -11,6 +11,7 @@ import { ArrowUp } from "lucide-react";
 import WhatWeDo from "./components/services";
 import RoleSpecialization from "./components/RoleSpecialization";
 import Gallery from "./components/Gallery";
+import TheTeam from "./components/team";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -58,6 +59,9 @@ export default function Home() {
       </section>
       <section id="Gallery">
         <Gallery />
+      </section>
+      <section id="team">
+        <TheTeam />
       </section>
     </div>
   );
