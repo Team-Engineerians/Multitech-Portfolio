@@ -10,6 +10,7 @@ import StatsCards from "./components/StatsCards";
 import { ArrowUp } from "lucide-react";
 import WhatWeDo from "./components/services";
 import RoleSpecialization from "./components/RoleSpecialization";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -51,7 +52,12 @@ export default function Home() {
       )}
       <section id="services">
         <WhatWeDo />
+      </section>
+      <section id="Roles">
         <RoleSpecialization />
+      </section>
+      <section id="Gallery">
+        <Gallery />
       </section>
     </div>
   );
