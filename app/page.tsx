@@ -13,6 +13,7 @@ import RoleSpecialization from "./components/RoleSpecialization";
 import Gallery from "./components/Gallery";
 import TheTeam from "./components/team";
 import ClientsSection from "./components/clients";
+import TestimonialsSection from "./components/testimonials";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -64,8 +65,11 @@ export default function Home() {
       <section id="team">
         <TheTeam />
       </section>
-      <section id="team">
+      <section id="Clients">
         <ClientsSection />
+      </section>
+      <section id="testimonials">
+        <TestimonialsSection />
       </section>
     </div>
   );
