@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-screen h-[573px] bg-[#E1ECF7] text-black pt-10 px-4">
-      <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+    <footer className="w-screen h-[660px] bg-[#E1ECF7] text-black py-15 px-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-xl mx-auto">
         {/* Logo and Socials */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 gap-6 text-sm">
           <div>
             <h4 className="text-blue-700 font-medium mb-2">Quick Links</h4>
-            <ul className="space-y-1">
+            <ul className="space-y-4">
               <li>About</li>
               <li>Services</li>
               <li>Roles & Jobs</li>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Address Section */}
-        <div className="text-sm">
+        <div className="text-sm text-center md:text-left">
           <h4 className="text-blue-700 font-medium mb-2">
             Gorakhpur Branch Office
           </h4>
