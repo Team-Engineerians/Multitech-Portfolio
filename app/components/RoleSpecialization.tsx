@@ -112,7 +112,8 @@ export default function RolesWeSpecializeIn() {
                     alt={r.label}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end p-2">
+                  {/* Updated absolute positioning to center text at the bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-40 text-center p-2">
                     <span className="text-white text-sm">{r.label}</span>
                   </div>
                 </div>
