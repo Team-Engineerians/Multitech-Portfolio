@@ -2,18 +2,18 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#eaf4fc] text-black w-full py-10 px-8">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-        {/* Logo & Social */}
+    <footer className="w-screen h-[573px] bg-[#E1ECF7] text-black pt-10 px-4">
+      <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        {/* Logo and Socials */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
-            src="/logo.png"
+            src="/multitech.png"
             alt="Multi-Tech Logo"
             className="w-[100px] h-auto mb-2"
           />
-          <h3 className="font-bold text-lg">MULTI-TECH</h3>
+          <h3 className="font-bold text-xl">MULTI-TECH</h3>
           <p className="text-sm mb-4">TESTING & TRAINING CENTER</p>
-          <div className="flex gap-4 text-black text-lg">
+          <div className="flex gap-6 text-xl">
             <a href="#" aria-label="Facebook">
               📘
             </a>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Middle Section: Links & License */}
         <div className="grid grid-cols-2 gap-6 text-sm">
           <div>
             <h4 className="text-blue-700 font-medium mb-2">Quick Links</h4>
@@ -48,23 +48,17 @@ const Footer: React.FC = () => {
             <p className="mb-4">
               Approved by Govt. Of India, Ministry Of External Affairs
               <br />
-              License No. UP/PA/RT/10059/9908/2021
+              License No. UP/PART/100/5/9908/2021
             </p>
-
             <h4 className="text-blue-700 font-medium mb-2">Contact</h4>
-            <p>
-              +91-8467826648
-              <br />
-              +91-9316763631
-              <br />
-              srivastava.aman.umc@gmail.com
-              <br />
-              aditi.unitemanpower@gmail.com
-            </p>
+            <p className="mb-1">+91-8467826648</p>
+            <p className="mb-1">+91-9316763631</p>
+            <p className="mb-1">srivastava.aman.umc@gmail.com</p>
+            <p>aditi.unitesmanpower@gmail.com</p>
           </div>
         </div>
 
-        {/* Address */}
+        {/* Address Section */}
         <div className="text-sm">
           <h4 className="text-blue-700 font-medium mb-2">
             Gorakhpur Branch Office
@@ -72,7 +66,7 @@ const Footer: React.FC = () => {
           <p>
             MULTI-TECH TESTING AND TRAINING CENTER
             <br />
-            Jungle Sikari (Khorabar), PO – Jungle Chaura, Near Kesharvani Petrol
+            Jungle Sikari (Khorabar), PO– Jungle Chauri, Near Kesharwani Petrol
             Pump,
             <br />
             Gorakhpur, Uttar Pradesh – 273010

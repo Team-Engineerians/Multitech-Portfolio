@@ -33,13 +33,13 @@ const testimonials = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section className="w-screen h-[685px] bg-[#e1ecf7] py-14 flex flex-col items-center">
+    <section className="w-screen h-[685px] bg-[#e1ecf7] py-20 flex flex-col items-center">
       <h2 className="text-2xl font-semibold text-center">Testimonials</h2>
       <p className="text-sm text-gray-600 mb-10 text-center">
         What Our Clients Say
       </p>
 
-      <div className="flex justify-center gap-6 w-full px-12">
+      <div className="flex justify-center gap-18 w-full mt-8 px-12">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
@@ -55,7 +55,7 @@ const TestimonialsSection: React.FC = () => {
               “{testimonial.text}”
             </p>
 
-            <div className="flex flex-col gap-[1px] mt-1">
+            <div className="flex flex-col gap-2px mt-1">
               <div className="text-yellow-400 text-sm leading-none">
                 {"★".repeat(testimonial.stars)}
               </div>
@@ -70,7 +70,7 @@ const TestimonialsSection: React.FC = () => {
         ))}
       </div>
 
-      <p className="mt-6 text-gray-500 text-sm">and many more...</p>
+      <p className="mt-15 text-gray-500 text-md">and many more...</p>
     </section>
   );
 };
