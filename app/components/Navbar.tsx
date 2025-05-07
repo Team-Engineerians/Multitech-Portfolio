@@ -11,7 +11,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="w-screen bg-white py-4">
+    <nav className="fixed top-0 left-0 w-screen bg-white/60 backdrop-blur-[50px] py-4 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <a href="#top" className="flex-shrink-0">
