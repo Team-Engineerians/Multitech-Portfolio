@@ -4,13 +4,13 @@ const categories = [
   {
     title: "Construction",
     imgRoles: [
-      { label: "Masons", img: "/images/masons.jpg" },
-      { label: "Steel Fixers", img: "/images/steel-fixers.jpg" },
+      { label: "Masons", img: "/masons.png" },
+      { label: "Steel Fixers", img: "/steelfixer.png" },
       {
         label: "Shuttering Carpenters",
-        img: "/images/shuttering-carpenters.jpg",
+        img: "/Shuttering_carpenter.png",
       },
-      { label: "Painters", img: "/images/painters.jpg" },
+      { label: "Painters", img: "/Painter.png" },
     ],
     textRoles: [
       "Masons",
@@ -23,10 +23,10 @@ const categories = [
   {
     title: "Mechanical",
     imgRoles: [
-      { label: "Mechanical Fitters", img: "/images/mechanical-fitters.jpg" },
-      { label: "Machine Operators", img: "/images/machine-operators.jpg" },
-      { label: "Industrial Welders", img: "/images/industrial-welders.jpg" },
-      { label: "Fabricators", img: "/images/fabricators.jpg" },
+      { label: "Mechanical Fitters", img: "/mechanical_fitter.png" },
+      { label: "Machine Operators", img: "/machine_operators.png" },
+      { label: "Industrial Welders", img: "/Industrial_welders.png" },
+      { label: "Fabricators", img: "/Fabricators.png" },
     ],
     textRoles: [
       "Mechanical Fitters",
@@ -39,10 +39,10 @@ const categories = [
   {
     title: "MEP Technician",
     imgRoles: [
-      { label: "HVAC Technicians", img: "/images/hvac-technicians.jpg" },
-      { label: "Electricians", img: "/images/electricians.jpg" },
-      { label: "Plumbers", img: "/images/plumbers.jpg" },
-      { label: "Pipe Fitters", img: "/images/pipe-fitters.jpg" },
+      { label: "HVAC Technicians", img: "/HVAC_Technicians.png" },
+      { label: "Electricians", img: "/Electricians.png" },
+      { label: "Plumbers", img: "/Plumbers.png" },
+      { label: "Pipe Fitters", img: "/Pipe_fitters.png" },
     ],
     textRoles: [
       "HVAC Technicians",
@@ -55,20 +55,20 @@ const categories = [
   {
     title: "Hospitality",
     imgRoles: [
-      { label: "Cooks", img: "/images/cooks.jpg" },
-      { label: "Waiters", img: "/images/waiters.jpg" },
-      { label: "Housekeeping", img: "/images/housekeeping.jpg" },
-      { label: "Delivery Staff", img: "/images/delivery-staff.jpg" },
+      { label: "Cooks", img: "/Cooks.png" },
+      { label: "Waiters", img: "/Waiters.png" },
+      { label: "Housekeeping", img: "/House_keeping.png" },
+      { label: "Delivery Staff", img: "/Delivery_staff.png" },
     ],
     textRoles: ["Cooks", "Waiters", "Housekeeping", "Delivery Staff", "+ more"],
   },
   {
     title: "Interior and Decor",
     imgRoles: [
-      { label: "Carpenters", img: "/images/carpenters.jpg" },
-      { label: "Gypsum Carpenters", img: "/images/gypsum-carpenters.jpg" },
-      { label: "Painters & Polishers", img: "/images/painters-polishers.jpg" },
-      { label: "Tiles & Marble Fixer", img: "/images/tiles-marble-fixer.jpg" },
+      { label: "Carpenters", img: "/Carpenter.png" },
+      { label: "Gypsum Carpenters", img: "/Gypsm_carpenter.png" },
+      { label: "Painters & Polishers", img: "/Painter_polisher.png" },
+      { label: "Tiles & Marble Fixer", img: "/Tile_marble_fixer.png" },
     ],
     textRoles: [
       "Carpenters",
