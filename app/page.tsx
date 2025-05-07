@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col items-center justify-start relative overflow-hidden px-4 py-10">
+    <div className="min-h-screen bg-white text-black flex flex-col items-center justify-start relative overflow-hidden px-4">
       <Navbar />
       <HeroSection />
       <GlobeBackground />
