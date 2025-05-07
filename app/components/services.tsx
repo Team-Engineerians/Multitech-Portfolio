@@ -131,7 +131,7 @@ export default function WhatWeDo() {
   return (
     <div className="font-sans text-gray-800">
       {/* What We Do Section */}
-      <section className="bg-[#E1ECF7] w-screen h-[907px] py-16 px-4 flex justify-center">
+      <section className="bg-[#A4A5AE] w-screen h-[907px] py-16 px-4 flex justify-center">
         <div className="max-w-[1200px] w-full mx-auto">
           <h2 className="text-3xl md:text-4xl mt-10 font-bold text-center mb-2 text-gray-900">
             What we do
@@ -142,21 +142,21 @@ export default function WhatWeDo() {
 
           {/* Row 1 */}
           <div className="flex gap-6 justify-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-md w-[356px] h-[285px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[356px] h-[285px] transition-all duration-300 hover:scale-105 hover:shadow-xl">
               <img
                 src="pic1.png"
                 alt="Service 1"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-md w-[353px] h-[285px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[353px] h-[285px] transition-all duration-300 hover:scale-105 hover:shadow-xl">
               <img
                 src="pic2.png"
                 alt="Service 2"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-md w-[450px] h-[285px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[450px] h-[285px] transition-all duration-300 hover:scale-105 hover:shadow-xl">
               <img
                 src="pic3.png"
                 alt="Service 3"
@@ -167,21 +167,21 @@ export default function WhatWeDo() {
 
           {/* Row 2 */}
           <div className="flex gap-6 justify-center mt-6">
-            <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px] transition-all duration-300 hover:scale-105 hover:shadow-xl">
               <img
                 src="pic4.png"
                 alt="Service 4"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-md w-[603px] h-[346px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[603px] h-[346px] transition-all duration-300 hover:scale-105 hover:shadow-xl">
               <img
                 src="pic5.png"
                 alt="Service 5"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-[278px] h-[346px] transition-all duration-300 hover:scale-105 hover:shadow-xl">
               <img
                 src="pic6.png"
                 alt="Service 6"
