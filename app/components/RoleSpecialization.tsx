@@ -6,10 +6,7 @@ const categories = [
     imgRoles: [
       { label: "Masons", img: "/masons.png" },
       { label: "Steel Fixers", img: "/steelfixer.png" },
-      {
-        label: "Shuttering Carpenters",
-        img: "/Shuttering_carpenter.png",
-      },
+      { label: "Shuttering Carpenters", img: "/Shuttering_carpenter.png" },
       { label: "Painters", img: "/Painter.png" },
     ],
     textRoles: [
@@ -82,7 +79,7 @@ const categories = [
 
 export default function RolesWeSpecializeIn() {
   return (
-    <div className="px-4 py-16 font-sans text-gray-800 space-y-16">
+    <div className="px-4 py-16 font-sans text-gray-800 space-y-16 bg-white">
       {/* Header */}
       <div className="text-center space-y-2">
         <h2 className="text-3xl font-bold">Roles We Specialize In</h2>
@@ -100,21 +97,22 @@ export default function RolesWeSpecializeIn() {
               {cat.title}
             </span>
 
-            {/* Cards (added pt-6 for spacing) */}
-            <div className="flex justify-between gap-6 pt-6">
+            {/* Cards */}
+            <div className="flex flex-wrap justify-start gap-19 pt-6">
               {cat.imgRoles.map((r) => (
                 <div
                   key={r.label}
-                  className="relative w-[260px] h-[175px] rounded-[10px] overflow-hidden shadow-md"
+                  className="relative w-[260px] h-[175px] rounded-[10px] overflow-hidden shadow-md transform transition duration-300 hover:scale-105"
                 >
                   <img
                     src={r.img}
                     alt={r.label}
                     className="w-full h-full object-cover"
                   />
-                  {/* Updated absolute positioning to center text at the bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-40 text-center p-2">
-                    <span className="text-white text-sm">{r.label}</span>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-center p-2">
+                    <span className="text-white text-sm font-medium">
+                      {r.label}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -128,7 +126,7 @@ export default function RolesWeSpecializeIn() {
         ))}
       </div>
 
-      {/* Bottom: Text Grid */}
+      {/* Bottom Text Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {categories.map((cat) => (
           <div
