@@ -10,12 +10,9 @@ const colorClassMap: Record<(typeof COLORS)[number], string> = {
   "blue-200": "bg-blue-200",
 };
 
-// Base row length
 const BASE_COUNT = 6;
-// Card width options
 const WIDTHS = [220, 260, 300] as const;
 
-// Build a row of BASE_COUNT items, each with a color and width
 function makeRow() {
   return Array.from({ length: BASE_COUNT }, (_, i) => ({
     color: COLORS[i % COLORS.length],
@@ -25,14 +22,7 @@ function makeRow() {
 
 export default function Gallery() {
   const rows = [makeRow(), makeRow(), makeRow()];
-
-  // Gap between cards
   const gap = 16;
-  // For each row we compute halfOffset per card widths
-  const halfOffsets = rows.map((row) => {
-    const firstWidth = row[0].width;
-    return (firstWidth + gap) / 2;
-  });
 
   return (
     <section className="w-screen bg-gray-900 text-white overflow-hidden py-16">
@@ -44,30 +34,64 @@ export default function Gallery() {
         </p>
       </div>
 
-      {/* Rows */}
+      {/* Rows with infinite scroll */}
       <div className="space-y-8">
-        {rows.map((row, idx) => (
-          <div
-            key={idx}
-            className="flex space-x-4"
-            style={{
-              width: "100vw",
-              transform:
-                idx % 2 === 0
-                  ? `translateX(-${halfOffsets[idx]}px)`
-                  : `translateX(${halfOffsets[idx]}px)`,
-            }}
-          >
-            {row.map(({ color, width }, i) => (
+        {rows.map((row, idx) => {
+          const isEven = idx % 2 === 0;
+          const direction = isEven ? "scroll-left" : "scroll-right";
+
+          return (
+            <div key={idx} className="overflow-hidden">
               <div
-                key={i}
-                className={`${colorClassMap[color]} h-[175px] rounded-lg flex-shrink-0`}
-                style={{ width: `${width}px` }}
-              />
-            ))}
-          </div>
-        ))}
+                className={`flex gap-4 animate-${direction}`}
+                style={{
+                  width: "max-content",
+                  animationDuration: "30s",
+                  animationTimingFunction: "linear",
+                  animationIterationCount: "infinite",
+                }}
+              >
+                {/* Repeat items twice for smooth looping */}
+                {[...row, ...row].map(({ color, width }, i) => (
+                  <div
+                    key={i}
+                    className={`${colorClassMap[color]} h-[175px] rounded-lg flex-shrink-0`}
+                    style={{ width: `${width}px` }}
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
+
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
+
+        .animate-scroll-left {
+          animation-name: scroll-left;
+        }
+
+        .animate-scroll-right {
+          animation-name: scroll-right;
+        }
+      `}</style>
     </section>
   );
 }

@@ -14,6 +14,7 @@ import Gallery from "./components/Gallery";
 import TheTeam from "./components/team";
 import ClientsSection from "./components/clients";
 import TestimonialsSection from "./components/testimonials";
+import Footer from "./components/footer";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -70,6 +71,9 @@ export default function Home() {
       </section>
       <section id="testimonials">
         <TestimonialsSection />
+      </section>
+      <section id="footer">
+        <Footer />
       </section>
     </div>
   );
