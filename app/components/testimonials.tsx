@@ -2,28 +2,28 @@ import React from "react";
 
 const testimonials = [
   {
-    logo: "/clients/sumistarr.png",
+    logo: "/Frame274.png",
     text: "Impressed by the seamless communication and professionalism throughout the project.",
     stars: 5,
     name: "Mr. Sunil",
     designation: "Managing director",
   },
   {
-    logo: "/clients/pinewood.png",
+    logo: "/Frame283.png",
     text: "Exceptional attention to detail and dedication to meeting our specific needs.",
     stars: 5,
     name: "Mr. Hari",
     designation: "Managing director",
   },
   {
-    logo: "/clients/arabtec.png",
+    logo: "/Frame289.png",
     text: "Highly satisfied with the quality of service and timely delivery of results.",
     stars: 5,
     name: "Mr. Kasif",
     designation: "General Manager",
   },
   {
-    logo: "/clients/alkazim.png",
+    logo: "/Frame291.png",
     text: "Consistently exceeded expectations, demonstrating a true commitment to client success.",
     stars: 5,
     name: "Mr. Tausif",
@@ -70,7 +70,7 @@ const TestimonialsSection: React.FC = () => {
         ))}
       </div>
 
-      <p className="mt-15 text-gray-500 text-md">and many more...</p>
+      <p className="mt-15 text-gray-900 text-md">and many more...</p>
     </section>
   );
 };

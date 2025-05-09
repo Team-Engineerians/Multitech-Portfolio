@@ -1,26 +1,26 @@
 import React from "react";
 
 const clients = [
-  "/clients/afaq.png",
-  "/clients/sumistarr.png",
-  "/clients/alsharafi.png",
-  "/clients/lifco.png",
-  "/clients/zenith.png",
-  "/clients/dsi.png",
-  "/clients/jd.png",
-  "/clients/node.png",
-  "/clients/bns.png",
-  "/clients/mantrac.png",
-  "/clients/riviera.png",
-  "/clients/cbc.png",
-  "/clients/arabiccalligraphy.png",
-  "/clients/futuregulf.png",
-  "/clients/rcc.png",
-  "/clients/eta.png",
-  "/clients/arabtec.png",
-  "/clients/alashfaq.png",
-  "/clients/rshk.png",
-  "/clients/falconfire.png",
+  "/Frame273.png",
+  "/Frame274.png",
+  "/Frame275.png",
+  "/Frame276.png",
+  "/Frame277.png",
+  "/Frame278.png",
+  "/Frame279.png",
+  "/Frame280.png",
+  "/Frame281.png",
+  "/Frame282.png",
+  "/Frame283.png",
+  "/Frame284.png",
+  "/Frame285.png",
+  "/Frame286.png",
+  "/Frame287.png",
+  "/Frame288.png",
+  "/Frame289.png",
+  "/Frame290.png",
+  "/Frame291.png",
+  "/Frame292.png",
 ];
 
 const ClientsSection: React.FC = () => {
@@ -29,17 +29,17 @@ const ClientsSection: React.FC = () => {
       <h2 className="text-2xl font-semibold mb-6">Our Clients</h2>
 
       {/* Logo grid container */}
-      <div className="w-[764px] h-[430px] overflow-hidden">
-        <div className="grid grid-cols-5 gap-4">
+      <div className="w-[764px] h-[450px] overflow-hidden">
+        <div className="grid grid-cols-5 gap-x-8 gap-y-4">
           {clients.map((logo, index) => (
             <div
               key={index}
-              className="w-[100px] h-[100px] flex items-center justify-center border border-gray-200 mx-auto"
+              className="w-[100px] h-[100px] flex items-center justify-center m-auto"
             >
               <img
                 src={logo}
                 alt={`Client ${index + 1}`}
-                className="object-contain max-w-[100px] max-h-[100px]"
+                className="object-contain max-w-[100px] max-h-[110px]"
                 width={100}
                 height={100}
               />
@@ -48,7 +48,7 @@ const ClientsSection: React.FC = () => {
         </div>
       </div>
 
-      <p className="mt-6 text-gray-500">and many more...</p>
+      <p className="mt-10 text-gray-800">and many more...</p>
     </section>
   );
 };
