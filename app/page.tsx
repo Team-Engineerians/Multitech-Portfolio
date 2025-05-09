@@ -15,6 +15,7 @@ import TheTeam from "./components/team";
 import ClientsSection from "./components/clients";
 import TestimonialsSection from "./components/testimonials";
 import Footer from "./components/footer";
+import ConnectUs from "./components/connectUs";
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -54,27 +55,15 @@ export default function Home() {
           <ArrowUp className="w-5 h-5" />
         </button>
       )}
-      <section id="services">
+      
         <WhatWeDo />
-      </section>
-      <section id="Roles">
         <RoleSpecialization />
-      </section>
-      <section id="Gallery">
         <Gallery />
-      </section>
-      <section id="team">
         <TheTeam />
-      </section>
-      <section id="Clients">
         <ClientsSection />
-      </section>
-      <section id="testimonials">
-        <TestimonialsSection />
-      </section>
-      <section id="footer">
+      <TestimonialsSection />
+      <ConnectUs />
         <Footer />
-      </section>
     </div>
   );
 }
