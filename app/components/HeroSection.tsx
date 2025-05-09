@@ -7,7 +7,7 @@ const wordsdown = ["Without Borders.", "Paise Kamaye.", "واكسب المال"]
 const HeroSection = () => {
   return (
     <div className="text-center z-10">
-      <h1 className="text-7xl font-extrabold text-[#115FB6] mt-4 mb-4">
+      <h1 className="text-7xl font-extrabold text-[#115FB6] pt-20 mt-4 mb-4">
         <FlipWords words={words} />
         <br />
         <FlipWords words={wordsdown} />
