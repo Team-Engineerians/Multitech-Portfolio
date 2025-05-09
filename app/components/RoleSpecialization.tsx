@@ -93,7 +93,7 @@ export default function RolesWeSpecializeIn() {
         {categories.map((cat) => (
           <div key={cat.title} className="relative max-w-[1396px] mx-auto">
             {/* Pill */}
-            <span className="absolute -top-6 left-0 bg-gray-200 text-gray-600 text-sm px-4 py-1 rounded-[10px]">
+            <span className="absolute -top-6 left-0 bg-gray-200 text-gray-600 hover:bg-orange-400 hover:text-white text-sm px-4 py-1 rounded-[10px]">
               {cat.title}
             </span>
 
@@ -110,7 +110,7 @@ export default function RolesWeSpecializeIn() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-center p-2">
-                    <span className="text-white text-sm font-medium">
+                    <span className="text-white hover:text-orange-400 text-sm font-medium">
                       {r.label}
                     </span>
                   </div>
@@ -127,24 +127,26 @@ export default function RolesWeSpecializeIn() {
       </div>
 
       {/* Bottom Text Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pt-12">
         {categories.map((cat) => (
           <div
             key={cat.title}
-            className="bg-white rounded-2xl p-6 shadow-sm flex flex-col"
+            className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm transition-all hover:shadow-md hover:border-blue-400"
           >
-            <h4 className="font-semibold text-gray-800 mb-4">{cat.title}</h4>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {cat.textRoles.map((t, i) => (
+            <h4 className="font-semibold text-gray-800 mb-4 group-hover:text-blue-600">
+              {cat.title}
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {cat.textRoles.map((role, i) => (
                 <span
                   key={i}
-                  className={`text-sm px-3 py-1 rounded-full ${
-                    t === "+ more"
-                      ? "border border-gray-400 text-gray-500"
-                      : "bg-gray-100 text-gray-700"
+                  className={`text-sm px-3 py-1 rounded-full transition-colors ${
+                    role === "+ more"
+                      ? "border border-gray-400 text-gray-500 group-hover:border-blue-400 group-hover:text-blue-500"
+                      : "bg-gray-100 text-gray-700 group-hover:bg-blue-100 group-hover:text-blue-700"
                   }`}
                 >
-                  {t}
+                  {role}
                 </span>
               ))}
             </div>
