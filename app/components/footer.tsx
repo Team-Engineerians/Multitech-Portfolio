@@ -2,18 +2,16 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-screen h-[660px] bg-[#E1ECF7] text-black py-15 px-10">
+    <footer className="w-screen h-[660px] bg-[#E1ECF7] text-black pt-25 px-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-xl mx-auto">
         {/* Logo and Socials */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img
             src="/multitech.png"
             alt="Multi-Tech Logo"
-            className="w-[100px] h-auto mb-2"
+            className="w-[300px] h-auto mb-2"
           />
-          <h3 className="font-bold text-xl">MULTI-TECH</h3>
-          <p className="text-sm mb-4">TESTING & TRAINING CENTER</p>
-          <div className="flex gap-6 text-xl">
+          <div className="flex gap-14 mt-8 text-2xl">
             <a href="#" aria-label="Facebook">
               📘
             </a>
@@ -31,9 +29,9 @@ const Footer: React.FC = () => {
 
         {/* Middle Section: Links & License */}
         <div className="grid grid-cols-2 gap-6 text-sm">
-          <div>
-            <h4 className="text-blue-700 font-medium mb-2">Quick Links</h4>
-            <ul className="space-y-4">
+          <div className="ml-20 font-semibold">
+            <h4 className="text-blue-700 font-medium mb-6">Quick Links</h4>
+            <ul className="space-y-8">
               <li>About</li>
               <li>Services</li>
               <li>Roles & Jobs</li>
@@ -43,40 +41,39 @@ const Footer: React.FC = () => {
               <li>Testimonials</li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-blue-700 font-medium mb-2">License</h4>
+          <div className="font-semibold ml-30 w-[400px]">
+            <h4 className="text-blue-700 font-medium mb-6">License</h4>
             <p className="mb-4">
               Approved by Govt. Of India, Ministry Of External Affairs
               <br />
               License No. UP/PART/100/5/9908/2021
             </p>
-            <h4 className="text-blue-700 font-medium mb-2">Contact</h4>
+            <h4 className="text-blue-700 font-medium mb-6">Contact</h4>
             <p className="mb-1">+91-8467826648</p>
             <p className="mb-1">+91-9316763631</p>
             <p className="mb-1">srivastava.aman.umc@gmail.com</p>
             <p>aditi.unitesmanpower@gmail.com</p>
+            {/* Address Section */}
+            <div className="text-sm text-center mt-6 md:text-left">
+              <h4 className="text-blue-700 font-medium mb-2">
+                Gorakhpur Branch Office
+              </h4>
+              <p>
+                MULTI-TECH TESTING AND TRAINING CENTER
+                <br />
+                Jungle Sikari (Khorabar), PO– Jungle Chauri, Near Kesharwani
+                Petrol Pump,
+                <br />
+                Gorakhpur, Uttar Pradesh – 273010
+                <br />
+                +91-9839865723, +91-8467826648
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Address Section */}
-        <div className="text-sm text-center md:text-left">
-          <h4 className="text-blue-700 font-medium mb-2">
-            Gorakhpur Branch Office
-          </h4>
-          <p>
-            MULTI-TECH TESTING AND TRAINING CENTER
-            <br />
-            Jungle Sikari (Khorabar), PO– Jungle Chauri, Near Kesharwani Petrol
-            Pump,
-            <br />
-            Gorakhpur, Uttar Pradesh – 273010
-            <br />
-            +91-9839865723, +91-8467826648
-          </p>
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-600 mt-10">
+      <div className="text-center font-bold text-sm text-gray-600 mt-30">
         © 2025 Multi-Tech Testing and Training Center
       </div>
     </footer>
