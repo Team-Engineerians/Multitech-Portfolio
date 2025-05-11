@@ -43,11 +43,10 @@ export default function Navbar() {
             Mail us
           </a>
           <a
-            href="tel:+918467826648"
-            className="flex items-center text-black font-bold"
+            href="#"
+            className="flex items-center bg-blue-800 hover:bg-blue-900 text-white text-sm px-5 py-2 rounded-full transition-colors duration-300"
           >
-            <PhoneIcon size={16} className="mr-2" />
-            +91‑84678 26648
+            Brochure
           </a>
         </div>
       </div>
