@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col items-center justify-start relative overflow-hidden px-4">
+    <div className="min-h-screen bg-white text-black flex flex-col items-center justify-start relative overflow-hidden px-4 font-['SF_Pro_Display',sans-serif]">
       <Navbar />
       <HeroSection />
       <GlobeBackground />
