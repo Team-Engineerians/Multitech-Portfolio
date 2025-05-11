@@ -125,34 +125,6 @@ export default function RolesWeSpecializeIn() {
           </div>
         ))}
       </div>
-
-      {/* Bottom Text Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pt-12">
-        {categories.map((cat) => (
-          <div
-            key={cat.title}
-            className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm transition-all hover:shadow-md hover:border-blue-400"
-          >
-            <h4 className="font-semibold text-gray-800 mb-4 group-hover:text-blue-600">
-              {cat.title}
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {cat.textRoles.map((role, i) => (
-                <span
-                  key={i}
-                  className={`text-sm px-3 py-1 rounded-full transition-colors ${
-                    role === "+ more"
-                      ? "border border-gray-400 text-gray-500 group-hover:border-blue-400 group-hover:text-blue-500"
-                      : "bg-gray-100 text-gray-700 group-hover:bg-blue-100 group-hover:text-blue-700"
-                  }`}
-                >
-                  {role}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }
