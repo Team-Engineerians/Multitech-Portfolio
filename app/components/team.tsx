@@ -25,39 +25,49 @@ const team = [
 
 export default function MeetTheTeam() {
   return (
-    <section className="w-screen h-[838px] bg-[#E1ECF7] py-16 flex items-center justify-center">
+    <section className="w-screen bg-[#E1ECF7] py-8 md:py-12 lg:py-16 min-h-screen">
       {/* Content Container */}
-      <div className="text-center">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12">
-          <h2 className="text-4xl font-semibold text-gray-800">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
+          <h2 className="text-3xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
             Meet the Team
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-base md:text-lg text-gray-600">
             Leadership That Drives Excellence
           </p>
         </div>
 
         {/* Cards */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-25 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {team.map((member) => (
-            <div key={member.name} className="text-center">
-              {/* Image container only */}
-              <div className="bg-white rounded-lg w-[262px] h-[312px] mx-auto mb-4 overflow-hidden">
+            <div 
+              key={member.name} 
+              className="flex flex-col items-center mx-auto w-full max-w-[300px] md:max-w-[262px]"
+            >
+              {/* Image container */}
+              <div className="bg-white rounded-lg w-full h-[280px] md:h-[300px] lg:h-[312px] overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
                 <img
                   src={member.img}
                   alt={member.name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
 
               {/* Name & Title */}
-              <h3 className="text-2xl font-bold text-gray-800">{member.name}</h3>
-              <p className="text-md text-gray-500 mb-2">{member.title}</p>
+              <div className="mt-4 md:mt-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800">
+                  {member.name}
+                </h3>
+                <p className="text-sm md:text-md text-gray-500 mt-1 mb-2">
+                  {member.title}
+                </p>
+              </div>
 
-              {/* Bio matching image width */}
-              <div className="w-[232px] mx-auto">
-                <p className="text-lg text-blue-600 text-center break-words">
+              {/* Bio */}
+              <div className="w-full md:w-[232px] px-4 md:px-0">
+                <p className="text-base md:text-lg text-blue-600 text-center">
                   {member.bio}
                 </p>
               </div>
