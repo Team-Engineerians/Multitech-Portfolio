@@ -1,129 +1,3 @@
-// import React from "react";
-
-// export default function WhatWeDo() {
-//   return (
-//     <div className="bg-[#E1ECF7] w-screen h-[907px] py-16 px-4 font-sans text-gray-800 flex justify-center">
-//       <div className="max-w-[1200px] w-full mx-auto">
-//         <h2 className="text-3xl md:text-4xl mt-10 font-bold text-center mb-2 text-gray-900">
-//           What we do
-//         </h2>
-//         <p className="text-center text-gray-600 mb-12">
-//           Comprehensive Manpower & Support Services
-//         </p>
-
-//         {/* Row 1 */}
-//         <div className="w-[1191px] flex gap-6">
-//           {/* Recruitment Card */}
-//           <div className="relative rounded-2xl overflow-hidden shadow-md w-[356px] h-[285px]">
-//             <img
-//               src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=600&q=80"
-//               alt="Recruitment Background"
-//               className="absolute inset-0 w-full h-full object-cover"
-//             />
-//             <div className="absolute inset-0 bg-[#183189]/90 p-6 flex flex-col justify-end">
-//               <h3 className="text-lg font-semibold text-white mb-2">
-//                 Recruitment for Overseas Jobs
-//               </h3>
-//               <p className="text-white">
-//                 Connecting skilled workers with reputable employers globally.
-//               </p>
-//             </div>
-//           </div>
-
-//           {/* Visa Endorsement Card */}
-//           <div className="relative rounded-2xl overflow-hidden shadow-md w-[353px] h-[285px]">
-//             <img
-//               src="https://images.unsplash.com/photo-1581093588401-22d8a1a7700b?auto=format&fit=crop&w=600&q=80"
-//               alt="Visa Background"
-//               className="absolute inset-0 w-full h-full object-cover"
-//             />
-//             <div className="absolute inset-0 bg-[#0D1A44]/90 p-6 flex flex-col justify-end">
-//               <h3 className="text-lg font-semibold text-white mb-2">
-//                 Visa Endorsement (Visit & Employment)
-//               </h3>
-//               <p className="text-white">
-//                 Simplifying complex visa processes for work or travel.
-//               </p>
-//             </div>
-//           </div>
-
-//           {/* Emigration Assistance Card */}
-//           <div className="relative rounded-2xl overflow-hidden shadow-md bg-white p-6 flex flex-col justify-center w-[450px] h-[285px]">
-//             <div className="absolute right-[-20px] top-[-20px] w-[300px] h-[300px] border-2 border-gray-300 rounded-full opacity-30"></div>
-//             <div className="absolute right-0 top-0 w-[200px] h-[200px] border-2 border-gray-300 rounded-full opacity-30"></div>
-//             <div className="relative z-10">
-//               <h3 className="text-lg font-semibold mb-2">
-//                 Emigration Assistance
-//               </h3>
-//               <p className="text-gray-600">
-//                 Handling all legal, document, and clearance procedures.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Row 2 */}
-//         <div className="w-[1191px] flex gap-6 mt-6">
-//           {/* Document Attestation */}
-//           <div className="relative rounded-2xl overflow-hidden shadow-md bg-[#0B1A35] text-white p-6 flex flex-col justify-center w-[278px] h-[346px]">
-//             <div className="flex items-center mb-4">
-//               <div className="w-2 h-2 bg-orange-500 mr-2"></div>
-//               <h3 className="text-lg font-semibold">Document Attestation</h3>
-//             </div>
-//             <p className="text-sm">
-//               Fast and certified attestation of educational, personal, and
-//               professional documents.
-//             </p>
-//           </div>
-
-//           {/* Technical Services */}
-//           <div className="relative rounded-2xl overflow-hidden shadow-md bg-white p-6 flex flex-col justify-center w-[603px] h-[346px] text-center">
-//             <h3 className="text-lg font-semibold mb-2">Technical Services</h3>
-//             <p className="text-sm text-gray-600 mb-4">
-//               Comprehensive support across:
-//             </p>
-//             <div className="flex flex-wrap justify-center gap-2">
-//               {[
-//                 "Interior Renovation",
-//                 "AC Maintenance",
-//                 "MEP & HVAC",
-//                 "Pest & Hygiene Control",
-//                 "Civil Works",
-//                 "Plumbing Works",
-//                 "and more...",
-//               ].map((service) => (
-//                 <span
-//                   key={service}
-//                   className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm whitespace-nowrap"
-//                 >
-//                   {service}
-//                 </span>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Air Ticketing */}
-//           <div className="relative rounded-2xl overflow-hidden shadow-md h-[346px] w-[278px]">
-//             <img
-//               src="https://images.unsplash.com/photo-1583500179095-1e4c38808e1e?auto=format&fit=crop&w=600&q=80"
-//               alt="Airplane"
-//               className="absolute inset-0 w-full h-full object-cover"
-//             />
-//             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent p-6 flex flex-col justify-end">
-//               <h3 className="text-lg font-semibold text-white mb-2">
-//                 Air Ticketing
-//               </h3>
-//               <p className="text-white text-sm">
-//                 Booking flights with care and cost-efficiency.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 import React from "react";
 import { GlobeDemo } from "./globeDemo";
 
@@ -132,25 +6,47 @@ export default function WhatWeDo() {
     <div className="font-sans text-gray-800">
       {/* What We Do Section */}
       <section
-        className="w-screen h-[907px] py-16 px-4 flex justify-center"
+        className="w-screen 
+                   min-h-screen 
+                   py-8 sm:py-12 md:py-16 
+                   px-4 sm:px-6 md:px-8"
         style={{
           background: "linear-gradient(190deg, #FFDCAD, #F7EADC, #CAD5E8)",
         }}
       >
         <div className="max-w-[1200px] w-full mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-2 text-white tracking-wide">
-            WHAT WE DO
-          </h2>
-          <p className="text-center text-white text-lg font-medium mb-12">
-            Comprehensive Manpower & Support Services
-          </p>
+          {/* Section Header */}
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl 
+                          font-extrabold 
+                          text-white 
+                          tracking-wide 
+                          mb-2 sm:mb-3">
+              WHAT WE DO
+            </h2>
+            <p className="text-white 
+                         text-base sm:text-lg 
+                         font-medium">
+              Comprehensive Manpower & Support Services
+            </p>
+          </div>
 
-          {/* Row 1 */}
-          <div className="flex gap-6 justify-center">
+          {/* Row 1 - Service Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+                         gap-4 sm:gap-5 md:gap-6 
+                         mb-4 sm:mb-5 md:mb-6">
             {["pic1.png", "pic2.png", "pic3.png", "pic4.png"].map((src, i) => (
               <div
                 key={i}
-                className="relative rounded-[30px] overflow-hidden shadow-lg w-[286px] h-[300px] hover:scale-105 transition-transform duration-300"
+                className="relative 
+                          rounded-[20px] sm:rounded-[25px] md:rounded-[30px] 
+                          overflow-hidden 
+                          shadow-lg 
+                          aspect-[4/4.2] sm:aspect-[4/4.5] md:aspect-[4/4.2]
+                          hover:scale-[1.02] 
+                          transition-transform duration-300
+                          mx-auto
+                          w-full max-w-[300px]"
               >
                 <img
                   src={src}
@@ -161,12 +57,21 @@ export default function WhatWeDo() {
             ))}
           </div>
 
-          {/* Row 2 */}
-          <div className="flex gap-6 justify-center mt-6">
+          {/* Row 2 - Larger Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 
+                         gap-4 sm:gap-5 md:gap-6">
             {["pic5.png", "pic6.png"].map((src, i) => (
               <div
                 key={i}
-                className="relative rounded-[30px] overflow-hidden shadow-lg w-[588px] h-[300px] hover:scale-105 transition-transform duration-300"
+                className="relative 
+                          rounded-[20px] sm:rounded-[25px] md:rounded-[30px] 
+                          overflow-hidden 
+                          shadow-lg 
+                          aspect-[16/9]
+                          hover:scale-[1.02] 
+                          transition-transform duration-300
+                          mx-auto
+                          w-full"
               >
                 <img
                   src={src}
@@ -180,30 +85,81 @@ export default function WhatWeDo() {
       </section>
 
       {/* Vision + Globe + Mission Section */}
-      <section className="bg-white py-32 px-4 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Vision */}
-          <div className="md:w-1/3 text-left self-start mt-5">
-            <h2 className="text-3xl font-bold text-black mb-4">Vision</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              To deliver unmatched quality through expert training and testing,
-              building futures rooted <br /> in skill and excellence.
-            </p>
+      <section className="w-screen bg-white 
+                         min-h-screen 
+                         py-12 lg:py-0 
+                         relative">
+        <div className="max-w-7xl mx-auto h-full">
+          {/* Desktop Layout */}
+          <div className="hidden lg:flex flex-col h-screen relative">
+            {/* Vision - Top Left */}
+            <div className="absolute top-24 left-8 
+                           max-w-[400px] 
+                           text-left 
+                           z-10">
+              <h2 className="text-3xl font-bold text-black mb-4">
+                Vision
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                To deliver unmatched quality through expert training and testing,
+                building futures rooted in skill and excellence.
+              </p>
+            </div>
+
+            {/* Centered Globe */}
+            <div className="flex-1 flex items-center justify-center">
+              <div className="w-[576px] h-[508px]">
+                <GlobeDemo />
+              </div>
+            </div>
+
+            {/* Mission - Bottom Right */}
+            <div className="absolute bottom-24 right-8 
+                           max-w-[400px] 
+                           text-right 
+                           z-10">
+              <h2 className="text-3xl font-bold text-black mb-4">
+                Mission
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                To create lasting impact through effective placements, value-added
+                services, and a focus on empowering people and industries alike.
+              </p>
+            </div>
           </div>
 
-          {/* Globe */}
-          <div className="w-full md:w-[576px] h-[508px] flex justify-center items-center">
-            <GlobeDemo />
-          </div>
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden flex flex-col items-center px-4">
+            {/* Vision */}
+            <div className="w-full max-w-[500px] text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
+                Vision
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                To deliver unmatched quality through expert training and testing,
+                building futures rooted in skill and excellence.
+              </p>
+            </div>
 
-          {/* Mission */}
-          <div className="md:w-1/3 text-left md:text-right self-end">
-            <h2 className="text-3xl font-bold text-black mb-4">Mission</h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              To create lasting impact through effective placements, value-added
-              services, and a focus on empowering people and <br /> industries
-              alike.
-            </p>
+            {/* Centered Globe */}
+            <div className="w-full flex justify-center my-8">
+              <div className="w-[300px] h-[300px] 
+                             sm:w-[400px] sm:h-[400px] 
+                             md:w-[450px] md:h-[450px]">
+                <GlobeDemo />
+              </div>
+            </div>
+
+            {/* Mission */}
+            <div className="w-full max-w-[500px] text-center mt-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
+                Mission
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                To create lasting impact through effective placements, value-added
+                services, and a focus on empowering people and industries alike.
+              </p>
+            </div>
           </div>
         </div>
       </section>

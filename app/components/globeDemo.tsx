@@ -395,14 +395,13 @@
     ];
 
     return (
-      <div className="flex items-center justify-center py-2 mb-30 w-[600px] h-[520px] dark:bg-black bg-white relative">
-        <div className="max-w-7xl mx-auto w-full relative h-full px-4 flex flex-col justify-center items-center">
-          <div className=" w-full h-[30rem] md:h-[40rem] z-10 flex items-center justify-center">
-            <World data={sampleArcs} globeConfig={globeConfig} />
-          </div>
+      <div className="flex items-center justify-center 
+                      w-full h-full 
+                      relative">
+        <div className="w-full h-full 
+                        flex items-center justify-center">
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
-
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b from-transparent to-transparent pointer-events-none select-none z-40" />
-        </div>
+      </div>
     );
   }
