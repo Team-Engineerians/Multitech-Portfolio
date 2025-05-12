@@ -79,47 +79,161 @@ const categories = [
 
 export default function RolesWeSpecializeIn() {
   return (
-    <div className="px-4 py-16 font-sans text-gray-800 space-y-16 bg-white">
+    <div className="px-4 sm:px-6 md:px-8 
+                    py-8 sm:py-12 md:py-16 
+                    font-sans text-gray-800 
+                    bg-white">
       {/* Header */}
-      <div className="text-center space-y-2">
-        <h2 className="text-3xl font-bold">Roles We Specialize In</h2>
-        <p className="text-gray-600">
+      <div className="text-center mb-8 sm:mb-10 md:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl 
+                      font-bold 
+                      mb-2 sm:mb-3">
+          Roles We Specialize In
+        </h2>
+        <p className="text-gray-600 
+                      text-sm sm:text-base 
+                      max-w-[600px] 
+                      mx-auto">
           Skilled, Semi-Skilled, and Unskilled workforce for various sectors.
         </p>
       </div>
 
       {/* Categories */}
-      <div className="space-y-12">
+      <div className="space-y-10 sm:space-y-12 md:space-y-16">
         {categories.map((cat) => (
-          <div key={cat.title} className="relative max-w-[1396px] mx-auto">
-            {/* Pill */}
-            <span className="absolute -top-6 left-0 bg-gray-200 text-gray-600 hover:bg-orange-400 hover:text-white text-sm px-4 py-1 rounded-[10px]">
-              {cat.title}
-            </span>
+          <div key={cat.title} 
+               className="relative max-w-[1396px] mx-auto">
+            {/* Category Title Pill */}
+            <div className="mb-6 sm:mb-8">
+              <span className="bg-gray-200 text-gray-600 
+                             hover:bg-orange-400 hover:text-white 
+                             text-sm 
+                             px-4 py-1.5 
+                             rounded-[10px]
+                             inline-block">
+                {cat.title}
+              </span>
+            </div>
 
-            {/* Cards */}
-            <div className="flex flex-wrap justify-start gap-19 pt-6">
-              {cat.imgRoles.map((r) => (
-                <div
-                  key={r.label}
-                  className="relative w-[260px] h-[175px] rounded-[10px] overflow-hidden shadow-md transform transition duration-300 hover:scale-105"
-                >
-                  <img
-                    src={r.img}
-                    alt={r.label}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-center p-2">
-                    <span className="text-white hover:text-orange-400 text-sm font-medium">
-                      {r.label}
-                    </span>
+            {/* Mobile View (1-2 columns) */}
+            <div className="block sm:hidden">
+              <div className="grid grid-cols-2 gap-3">
+                {cat.imgRoles.map((r) => (
+                  <div
+                    key={r.label}
+                    className="relative aspect-[4/3] 
+                             rounded-[10px] 
+                             overflow-hidden 
+                             shadow-md"
+                  >
+                    <img
+                      src={r.img}
+                      alt={r.label}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 
+                                  bg-gradient-to-t from-black/70 via-black/30 to-transparent 
+                                  flex items-end 
+                                  p-2">
+                      <span className="text-white 
+                                     text-xs 
+                                     font-medium 
+                                     line-clamp-2 
+                                     text-center 
+                                     w-full">
+                        {r.label}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="flex justify-center mt-6">
+                <button className="bg-orange-400 
+                                 hover:bg-orange-500 
+                                 text-white 
+                                 text-sm 
+                                 px-6 py-2 
+                                 rounded-full 
+                                 transition-colors 
+                                 shadow-md">
+                  More {cat.title} Roles
+                </button>
+              </div>
+            </div>
 
-              {/* + more */}
-              <div className="flex items-center justify-center text-gray-400 text-sm">
-                + more…
+            {/* Tablet View (2-3 columns) */}
+            <div className="hidden sm:block md:hidden">
+              <div className="grid grid-cols-3 gap-4">
+                {cat.imgRoles.map((r) => (
+                  <div
+                    key={r.label}
+                    className="relative aspect-[4/3] 
+                             rounded-[10px] 
+                             overflow-hidden 
+                             shadow-md 
+                             transform transition duration-300 
+                             hover:scale-105"
+                  >
+                    <img
+                      src={r.img}
+                      alt={r.label}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 
+                                  bg-gradient-to-t from-black/70 via-black/30 to-transparent 
+                                  flex items-end 
+                                  p-3">
+                      <span className="text-white 
+                                     text-sm 
+                                     font-medium 
+                                     text-center 
+                                     w-full">
+                        {r.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                <div className="flex items-center justify-center text-gray-400 text-sm">
+                  + more…
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop View (4 columns) */}
+            <div className="hidden md:block">
+              <div className="grid grid-cols-4 gap-6">
+                {cat.imgRoles.map((r) => (
+                  <div
+                    key={r.label}
+                    className="relative aspect-[4/3] 
+                             rounded-[10px] 
+                             overflow-hidden 
+                             shadow-md 
+                             transform transition duration-300 
+                             hover:scale-105"
+                  >
+                    <img
+                      src={r.img}
+                      alt={r.label}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 
+                                  bg-gradient-to-t from-black/70 via-black/30 to-transparent 
+                                  flex items-end 
+                                  p-3">
+                      <span className="text-white 
+                                     text-sm 
+                                     font-medium 
+                                     text-center 
+                                     w-full">
+                        {r.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                <div className="flex items-center justify-center text-gray-400 text-sm">
+                  + more…
+                </div>
               </div>
             </div>
           </div>
