@@ -33,44 +33,78 @@ const testimonials = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section className="w-screen h-[685px] bg-[#e1ecf7] py-20 flex flex-col items-center">
-      <h2 className="text-2xl font-semibold text-center">Testimonials</h2>
-      <p className="text-sm text-gray-600 mb-10 text-center">
-        What Our Clients Say
-      </p>
+    <section className="w-screen bg-[#e1ecf7] py-12 md:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
+            Testimonials
+          </h2>
+          <p className="mt-2 text-sm md:text-base lg:text-lg text-gray-600">
+            What Our Clients Say
+          </p>
+        </div>
 
-      <div className="flex justify-center gap-18 w-full mt-8 px-12">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="bg-white w-[280px] h-[360px] rounded-xl px-5 pt-4 pb-4 shadow-md flex-shrink-0 flex flex-col justify-between"
-          >
-            <img
-              src={testimonial.logo}
-              alt={`Logo of ${testimonial.name}`}
-              className="w-[100px] h-[100px] object-contain mt-2 mb-3"
-            />
+        {/* Testimonials Grid/Slider */}
+        <div className="w-full overflow-x-auto pb-6 md:pb-8 hide-scrollbar">
+          <div className="flex flex-nowrap md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="w-[280px] md:w-full flex-shrink-0 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                {/* Logo */}
+                <div className="flex justify-center mb-4">
+                  <img
+                    src={testimonial.logo}
+                    alt={`Logo of ${testimonial.name}`}
+                    className="w-[80px] h-[80px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
 
-            <p className="text-[13px] text-gray-800 leading-[1.4] mb-1">
-              “{testimonial.text}”
-            </p>
+                {/* Testimonial Text */}
+                <div className="min-h-[100px] mb-4">
+                  <p className="text-sm md:text-base text-gray-800 leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                </div>
 
-            <div className="flex flex-col gap-2px mt-1">
-              <div className="text-yellow-400 text-sm leading-none">
-                {"★".repeat(testimonial.stars)}
+                {/* Rating and Author Info */}
+                <div className="space-y-2">
+                  <div className="text-yellow-400 text-lg">
+                    {"★".repeat(testimonial.stars)}
+                  </div>
+                  <div>
+                    <p className="text-sm md:text-base font-medium text-gray-900">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-xs md:text-sm text-gray-500">
+                      {testimonial.designation}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <p className="text-[13px] text-black font-medium leading-none">
-                {testimonial.name}
-              </p>
-              <p className="text-[12px] text-gray-400 leading-none">
-                {testimonial.designation}
-              </p>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* Footer Text */}
+        <p className="text-center mt-8 md:mt-10 text-base md:text-lg text-gray-900">
+          and many more...
+        </p>
       </div>
 
-      <p className="mt-15 text-gray-900 text-md">and many more...</p>
+      {/* Custom Scrollbar Styles */}
+      <style jsx>{`
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };
