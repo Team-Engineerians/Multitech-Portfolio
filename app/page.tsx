@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import AboutUs from "./components/aboutUs/page";
-import FloatingIcon from "./components/FloatingIcon";
 import GlobeBackground from "./components/GlobeBackground";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
@@ -37,7 +36,6 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <GlobeBackground />
-      <FloatingIcon />
       <StatsCards />
 
       <section id="about">
