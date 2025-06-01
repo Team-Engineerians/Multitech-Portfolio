@@ -24,9 +24,18 @@ const services = [
   },
 ];
 
+const PAGE_PADDING_LEFT = 276;
+const PAGE_PADDING_RIGHT = 276;
+const PAGE_PADDING_TOP = 64;
+const PAGE_PADDING_BOTTOM = 64;
+const CARD_GAP = 26;
+const SECTION_HEIGHT = 710;
 const CARD_WIDTH = 350;
 const CARD_HEIGHT = 620;
-const GAP = 24; // gap-6
+const VISIBLE_MAP_WIDTH = `calc(100vw - ${PAGE_PADDING_LEFT + PAGE_PADDING_RIGHT}px)`;
+const VISIBLE_MAP_HEIGHT = SECTION_HEIGHT - PAGE_PADDING_TOP - PAGE_PADDING_BOTTOM;
+const TOTAL_MAP_WIDTH = CARD_WIDTH * 5 + CARD_GAP * 4;
+const TOTAL_MAP_HEIGHT = CARD_HEIGHT;
 
 export default function WhatWeDo() {
   return (
@@ -42,8 +51,8 @@ export default function WhatWeDo() {
                 className={`flex-shrink-0 w-[350px] lg:w-1/5 h-full rounded-xl flex flex-col justify-between p-8 relative overflow-hidden ${i === 0 ? 'ml-[0px]' : ''} ${i === services.length - 1 ? 'mr-[100px]' : ''}`}
                 style={{
                   backgroundImage: `url('/worldmapscroll.svg')`,
-                  backgroundSize: `cover`,
-                  backgroundPosition: `-${i * (CARD_WIDTH + GAP)}px 0`,
+                  backgroundSize: `${TOTAL_MAP_WIDTH}px ${CARD_HEIGHT}px`,
+                  backgroundPosition: `-${i * (CARD_WIDTH + CARD_GAP)}px 0`,
                   backgroundRepeat: 'no-repeat',
                   backgroundColor: '#232323',
                 }}
