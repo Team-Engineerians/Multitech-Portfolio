@@ -59,25 +59,6 @@ const HeroSection = () => {
         />
       )}
 
-      {/* Top Navigation Bar */}
-      <div className="absolute top-0 left-0 w-full z-30 flex items-center justify-between px-12 py-5">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <span className="text-white font-bold text-base tracking-wide">MULTI-TECH</span>
-        </div>
-        {/* Nav Links */}
-        <nav className="hidden md:flex gap-16 text-white/80 text-[15px] font-normal">
-          <a href="#services" className="hover:text-white transition">Services</a>
-          <a href="#career" className="hover:text-white transition">Job roles</a>
-          <a href="#gallery" className="hover:text-white transition">Gallery</a>
-        </nav>
-        {/* Buttons */}
-        <div className="flex gap-3">
-          <button className="bg-white text-black rounded-full px-6 py-1.5 font-medium text-xs shadow hover:bg-[#e6e6e6] transition min-w-[100px]">Brochure</button>
-          <button className="bg-[#19170f] text-white rounded-full px-6 py-1.5 font-medium text-xs border border-white/20 hover:bg-[#23201a] transition min-w-[80px]">Mail us</button>
-        </div>
-      </div>
-
       {/* Hero Content */}
       <div className="relative z-30 flex flex-col items-start justify-center h-full pl-[8vw] pt-[8vh]" style={{ minHeight: '100vh' }}>
         <div className="mb-8 mt-8">
