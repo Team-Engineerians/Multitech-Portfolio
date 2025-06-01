@@ -2,10 +2,8 @@
 
 import { useEffect, useState } from "react";
 import AboutUs from "./components/aboutUs/page";
-import GlobeBackground from "./components/GlobeBackground";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import StatsCards from "./components/StatsCards";
 import { ArrowUp } from "lucide-react";
 import WhatWeDo from "./components/services";
 import RoleSpecialization from "./components/RoleSpecialization";
@@ -35,12 +33,8 @@ export default function Home() {
     <div className="min-h-screen bg-white text-black flex flex-col items-center justify-start relative overflow-hidden px-4 font-['SF_Pro_Display',sans-serif]">
       <Navbar />
       <HeroSection />
-      <GlobeBackground />
-      <StatsCards />
+      <AboutUs />
 
-      <section id="about">
-        <AboutUs />
-      </section>
 
       {/* Scroll to Top Button */}
       {showButton && (
