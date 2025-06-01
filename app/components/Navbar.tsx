@@ -37,8 +37,8 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <nav className={`hidden md:flex gap-16 text-[15px] font-normal transition-colors duration-300 ${
-            isScrolled ? 'text-gray-800' : 'text-white/80'
+          <nav className={`hidden md:flex gap-16 text-[15px] font-medium transition-colors duration-300 ${
+            isScrolled ? 'text-gray-800' : 'text-white/90'
           }`}>
             <Link href="#services" className={`hover:text-orange-500 transition ${isScrolled ? 'hover:text-orange-500' : 'hover:text-white'}`}>Services</Link>
             <Link href="#career" className={`hover:text-orange-500 transition ${isScrolled ? 'hover:text-orange-500' : 'hover:text-white'}`}>Job roles</Link>
@@ -47,10 +47,10 @@ const Navbar = () => {
 
           {/* Buttons */}
           <div className="flex gap-4">
-            <button className="bg-white text-black rounded-full px-8 py-2.5 font-medium text-sm shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 min-w-[120px]">
+            <button className="bg-white text-black rounded-full px-8 py-2.5 font-bold text-sm shadow-md hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 min-w-[120px]">
               Brochure
             </button>
-            <button className={`rounded-full px-8 py-2.5 font-medium text-sm border transition-all duration-300 ease-in-out transform hover:scale-105 min-w-[100px] ${
+            <button className={`rounded-full px-8 py-2.5 font-bold text-sm border transition-all duration-300 ease-in-out transform hover:scale-105 min-w-[100px] ${
               isScrolled 
                 ? 'bg-orange-500 text-white border-orange-500 hover:bg-white hover:text-orange-500 hover:border-orange-500' 
                 : 'bg-[#19170f] text-white border-white/20 hover:bg-white hover:text-black'
