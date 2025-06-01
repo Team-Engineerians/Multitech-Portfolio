@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const images = [
@@ -9,31 +9,55 @@ const images = [
   "/hero5.png"
 ];
 
+const FADE_DURATION = 1500; // ms
+
 const HeroSection = () => {
   const [bgIndex, setBgIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState<number | null>(null);
+  const [fadeIn, setFadeIn] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const fadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setBgIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // Change every 5 seconds
-    return () => clearInterval(interval);
-  }, []);
+    timeoutRef.current = setTimeout(() => {
+      setNextIndex((bgIndex + 1) % images.length);
+      setFadeIn(true);
+      fadeTimeoutRef.current = setTimeout(() => {
+        setBgIndex((prev) => (prev + 1) % images.length);
+        setFadeIn(false);
+        setNextIndex(null);
+      }, FADE_DURATION);
+    }, 5000);
+
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (fadeTimeoutRef.current) clearTimeout(fadeTimeoutRef.current);
+    };
+  }, [bgIndex]);
 
   return (
     <section
-      className="relative w-screen min-h-[100vh] flex items-stretch justify-start bg-black overflow-hidden z-[40]"
+      className="relative w-screen min-h-[100vh] flex items-stretch justify-start overflow-hidden z-[40]"
       style={{ minHeight: '100dvh', width: '100vw' }}
     >
-      {/* Background Image Only */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      {/* Current Image (always visible) */}
+      <Image
+        src={images[bgIndex]}
+        alt="Background"
+        fill
+        className="object-cover w-full h-full absolute inset-0 transition-opacity duration-[1500ms] ease-in-out opacity-100 z-0"
+        priority
+      />
+      {/* Next Image (fades in on top) */}
+      {nextIndex !== null && (
         <Image
-          src={images[bgIndex]}
+          src={images[nextIndex]}
           alt="Background"
           fill
-          className="object-cover w-full h-full transition-all duration-700"
+          className={`object-cover w-full h-full absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${fadeIn ? "opacity-100" : "opacity-0"} z-10`}
           priority
         />
-      </div>
+      )}
 
       {/* Top Navigation Bar */}
       <div className="absolute top-0 left-0 w-full z-30 flex items-center justify-between px-12 py-5">
