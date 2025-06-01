@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -8,7 +9,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <span className="text-white font-bold text-base tracking-wide">MULTI-TECH</span>
+            <Link href="/" className="flex-shrink-0">
+              <Image 
+                src="/navbar-logo.svg" 
+                alt="Logo" 
+                width={120} 
+                height={40} 
+                className="brightness-0 invert"
+              />
+            </Link>
           </div>
 
           {/* Navigation Links */}
