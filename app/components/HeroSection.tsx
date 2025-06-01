@@ -60,11 +60,11 @@ const HeroSection = () => {
       )}
 
       {/* Hero Content */}
-      <div className="relative z-30 flex flex-col items-start justify-center h-full pl-[8vw] pt-[8vh]" style={{ minHeight: '100vh' }}>
+      <div className="relative z-30 flex flex-col items-start justify-center h-full pl-[30vw] pt-[8vh]" style={{ minHeight: '100vh' }}>
         <div className="mb-8 mt-8">
-          <span className="text-[#e3d7a2] text-[28px] font-normal leading-tight block">Multi Tech<br />Testing and Training</span>
+          <span className="text-[#e3d7a2] text-[32px] font-normal leading-tight block">Multi Tech<br />Testing and Training</span>
         </div>
-        <h1 className="text-white text-[56px] md:text-[64px] lg:text-[68px] xl:text-[72px] 2xl:text-[76px] font-semibold leading-[1.08] mb-8 max-w-[700px]" style={{letterSpacing: '-1.5px'}}>
+        <h1 className="text-white text-[42px] md:text-[60px] lg:text-[64px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px]" style={{letterSpacing: '-1.5px'}}>
           Skilled manpower for<br />every need, across the<br />globe.
         </h1>
         <div className="mt-8 pt-6 w-full max-w-[600px]">
