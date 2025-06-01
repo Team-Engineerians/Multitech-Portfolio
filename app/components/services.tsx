@@ -1,83 +1,61 @@
 import React from "react";
 import { GlobeDemo } from "./globeDemo";
 
+const services = [
+  {
+    title: "Rcruitment for Overseas Jobs",
+    desc: "Connecting skilled workers with reputable employers globally.",
+  },
+  {
+    title: "Visa Endorsement",
+    desc: "Authenticating credentials for global recognition.",
+  },
+  {
+    title: "Emigration Assistance",
+    desc: "Guiding you through every step of lawful overseas employment.",
+  },
+  {
+    title: "Document Attestation",
+    desc: "Authenticating credentials for global recognition.",
+  },
+  {
+    title: "Air Ticketing",
+    desc: "Seamless flight bookings for your overseas placement journey.",
+  },
+];
+
+const CARD_WIDTH = 350;
+const CARD_HEIGHT = 620;
+const GAP = 24; // gap-6
+
 export default function WhatWeDo() {
   return (
     <div className="font-sans text-gray-800">
       {/* What We Do Section */}
-      <section
-        className="w-screen 
-                   min-h-screen 
-                   py-8 sm:py-12 md:py-16 
-                   px-4 sm:px-6 md:px-8"
-        style={{
-          background: "linear-gradient(190deg, #FFDCAD, #F7EADC, #CAD5E8)",
-        }}
-      >
-        <div className="max-w-[1200px] w-full mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl 
-                          font-extrabold 
-                          text-white 
-                          tracking-wide 
-                          mb-2 sm:mb-3">
-              WHAT WE DO
-            </h2>
-            <p className="text-white 
-                         text-base sm:text-lg 
-                         font-medium">
-              Comprehensive Manpower & Support Services
-            </p>
-          </div>
-
-          {/* Row 1 - Service Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-                         gap-4 sm:gap-5 md:gap-6 
-                         mb-4 sm:mb-5 md:mb-6">
-            {["pic1.png", "pic2.png", "pic3.png", "pic4.png"].map((src, i) => (
+      <section className="h-[710px] w-screen bg-[#565656] flex flex-col justify-start relative pl-[100px] pt-[48px] pb-[32px]">
+        <div className="relative z-10 flex flex-col h-full w-full p-0 m-0">
+          <h2 className="text-white text-3xl font-normal mb-8 text-left">What we do</h2>
+          <div className="flex flex-row w-full h-full items-stretch justify-stretch gap-x-[24px] overflow-x-auto hide-scrollbar p-0 m-0 relative z-10" style={{minHeight: '0'}}>
+            {services.map((service, i) => (
               <div
                 key={i}
-                className="relative 
-                          rounded-[20px] sm:rounded-[25px] md:rounded-[30px] 
-                          overflow-hidden 
-                          shadow-lg 
-                          aspect-[4/4.2] sm:aspect-[4/4.5] md:aspect-[4/4.2]
-                          hover:scale-[1.02] 
-                          transition-transform duration-300
-                          mx-auto
-                          w-full max-w-[300px]"
+                className={`flex-shrink-0 w-[350px] lg:w-1/5 h-full rounded-xl flex flex-col justify-between p-8 relative overflow-hidden ${i === 0 ? 'ml-[0px]' : ''} ${i === services.length - 1 ? 'mr-[100px]' : ''}`}
+                style={{
+                  backgroundImage: `url('/worldmapscroll.svg')`,
+                  backgroundSize: `cover`,
+                  backgroundPosition: `-${i * (CARD_WIDTH + GAP)}px 0`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundColor: '#232323',
+                }}
               >
-                <img
-                  src={src}
-                  alt={`Service ${i + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2 - Larger Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 
-                         gap-4 sm:gap-5 md:gap-6">
-            {["pic5.png", "pic6.png"].map((src, i) => (
-              <div
-                key={i}
-                className="relative 
-                          rounded-[20px] sm:rounded-[25px] md:rounded-[30px] 
-                          overflow-hidden 
-                          shadow-lg 
-                          aspect-[16/9]
-                          hover:scale-[1.02] 
-                          transition-transform duration-300
-                          mx-auto
-                          w-full"
-              >
-                <img
-                  src={src}
-                  alt={`Service ${i + 5}`}
-                  className="w-full h-full object-cover"
-                />
+                <div className="relative z-10 h-full flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-white text-2xl font-semibold mb-8 leading-snug">{service.title}</h3>
+                  </div>
+                  <div className="flex flex-col items-end justify-end h-full">
+                    <p className="text-white text-base font-normal leading-relaxed mt-auto mb-2 text-right">{service.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
