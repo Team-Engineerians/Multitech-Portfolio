@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function RolesWeSpecializeIn() {
   return (
@@ -23,11 +24,11 @@ export default function RolesWeSpecializeIn() {
           </div>
           {/* 3. Lathe Worker image (right, row 2) */}
           <div className="col-span-1 row-span-1 h-[150px]">
-            <img src="/lathe_worker.png" alt="Lathe Worker" className="w-full h-full object-cover" />
+            <Image src="/lathe_worker.png" alt="Lathe Worker" className="w-full h-full object-cover" width={150} height={150} loading="lazy" />
           </div>
           {/* 4. Painting Wall image (left, row 3) */}
           <div className="col-span-1 row-span-1 h-[150px]">
-            <img src="/painting_wall.png" alt="Painting Wall" className="w-full h-full object-cover" />
+            <Image src="/painting_wall.png" alt="Painting Wall" className="w-full h-full object-cover" width={150} height={150} loading="lazy" />
           </div>
           {/* 5. Skilled & Semi-Skilled Workers (tan, right, row 3) */}
           <div className="bg-[#a89d8d] p-4 flex flex-col justify-center items-start col-span-1 row-span-1 h-[150px]">
@@ -37,7 +38,7 @@ export default function RolesWeSpecializeIn() {
           </div>
           {/* 6. Scaffolding image (left, row 4) */}
           <div className="col-span-1 row-span-1 h-[150px]">
-            <img src="/scaffolding.png" alt="Scaffolding" className="w-full h-full object-cover" />
+            <Image src="/scaffolding.png" alt="Scaffolding" className="w-full h-full object-cover" width={150} height={150} loading="lazy" />
           </div>
           {/* 7. Interior & Fitout (light blue, right, row 4) */}
           <div className="bg-[#a6bbc7] p-4 flex flex-col justify-center items-start col-span-1 row-span-1 h-[150px]">
@@ -55,11 +56,11 @@ export default function RolesWeSpecializeIn() {
           </div>
           {/* 9. Construction Workers image (right, spans rows 5-6) */}
           <div className="col-start-2 row-span-2 flex flex-col h-full">
-            <img src="/construction_workers.png" alt="Construction Workers" className="w-full h-full min-h-[300px] object-cover" />
+            <Image src="/construction_workers.png" alt="Construction Workers" className="w-full h-full min-h-[300px] object-cover" width={150} height={300} loading="lazy" />
           </div>
           {/* 10. Hospitality image (left, row 6) */}
           <div className="col-span-1 row-span-1 h-[150px]">
-            <img src="/hospitality.png" alt="Hospitality" className="w-full h-full object-cover" />
+            <Image src="/hospitality.png" alt="Hospitality" className="w-full h-full object-cover" width={150} height={150} loading="lazy" />
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@ export default function RolesWeSpecializeIn() {
           </ul>
         </div>
         <div className="col-span-1 row-span-1">
-          <img src="/scaffolding.png" alt="Scaffolding" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" />
+          <Image src="/scaffolding.png" alt="Scaffolding" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" width={150} height={150} loading="lazy" />
         </div>
         <div className="bg-[#a6bbc7] p-4 sm:p-8 flex flex-col justify-center items-start col-span-1 row-span-1">
           <ul className="text-sm sm:text-base lg:text-base text-black list-disc pl-5 space-y-1 sm:space-y-2">
@@ -93,7 +94,7 @@ export default function RolesWeSpecializeIn() {
           </ul>
         </div>
         <div className="col-span-1 row-span-1">
-          <img src="/lathe_worker.png" alt="Lathe Worker" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" />
+          <Image src="/lathe_worker.png" alt="Lathe Worker" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" width={150} height={150} loading="lazy" />
         </div>
         <div className="bg-[#d05c4e] p-4 sm:p-8 flex flex-col justify-center items-start col-span-1 row-span-1">
           <ul className="text-sm sm:text-base lg:text-base text-white list-disc pl-5 space-y-1 sm:space-y-2">
@@ -102,11 +103,11 @@ export default function RolesWeSpecializeIn() {
           </ul>
         </div>
         <div className="col-span-1 row-span-2">
-          <img src="/construction_workers.png" alt="Construction Workers" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" />
+          <Image src="/construction_workers.png" alt="Construction Workers" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" width={150} height={300} loading="lazy" />
         </div>
         {/* Row 3 */}
         <div className="col-span-1 row-span-1">
-          <img src="/painting_wall.png" alt="Painting Wall" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" />
+          <Image src="/painting_wall.png" alt="Painting Wall" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" width={150} height={150} loading="lazy" />
         </div>
         <div className="bg-[#a89d8d] p-4 sm:p-8 flex flex-col justify-center items-start col-span-1 row-span-1">
           <ul className="text-sm sm:text-base lg:text-base text-white list-disc pl-5 space-y-1 sm:space-y-2">
@@ -114,7 +115,7 @@ export default function RolesWeSpecializeIn() {
           </ul>
         </div>
         <div className="col-span-1 row-span-1">
-          <img src="/hospitality.png" alt="Hospitality" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" />
+          <Image src="/hospitality.png" alt="Hospitality" className="w-full h-[120px] sm:h-[180px] lg:h-full object-cover" width={150} height={150} loading="lazy" />
         </div>
       </div>
     </section>

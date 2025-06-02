@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -9,10 +10,13 @@ const Footer: React.FC = () => {
         <div className="block lg:hidden space-y-8">
           {/* Logo and Socials for Mobile/Tablet */}
           <div className="text-center mb-8">
-            <img
+            <Image
               src="/multitech.png"
               alt="Multi-Tech Logo"
               className="w-[160px] sm:w-[200px] mx-auto h-auto mb-4"
+              width={200}
+              height={80}
+              loading="lazy"
             />
             <div className="flex justify-center gap-6 text-2xl">
               <a href="#" aria-label="Facebook">📘</a>
@@ -48,10 +52,13 @@ const Footer: React.FC = () => {
         <div className="hidden lg:grid lg:grid-cols-3 lg:gap-12">
           {/* Logo and Socials */}
           <div className="flex flex-col items-start text-left">
-            <img
+            <Image
               src="/multitech.png"
               alt="Multi-Tech Logo"
               className="w-[300px] h-auto mb-2"
+              width={300}
+              height={100}
+              loading="lazy"
             />
             <div className="flex gap-14 mt-8 text-2xl">
               <a href="#" aria-label="Facebook">📘</a>

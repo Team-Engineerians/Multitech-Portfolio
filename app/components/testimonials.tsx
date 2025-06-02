@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -55,10 +56,12 @@ const TestimonialsSection: React.FC = () => {
               >
                 {/* Logo */}
                 <div className="flex justify-center mb-2 sm:mb-4">
-                  <img
+                  <Image
                     src={testimonial.logo}
                     alt={`Logo of ${testimonial.name}`}
                     className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] object-contain"
+                    width={90}
+                    height={90}
                     loading="lazy"
                   />
                 </div>
@@ -66,7 +69,7 @@ const TestimonialsSection: React.FC = () => {
                 {/* Testimonial Text */}
                 <div className="min-h-[60px] sm:min-h-[100px] mb-2 sm:mb-4">
                   <p className="text-xs sm:text-sm md:text-base text-gray-800 leading-relaxed">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </p>
                 </div>
 

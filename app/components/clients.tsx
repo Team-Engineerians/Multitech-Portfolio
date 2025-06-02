@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const clients = [
   "/Frame273.png",
@@ -43,11 +44,13 @@ const ClientsSection: React.FC = () => {
         {/* Row 1: 7 logos */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-10 w-full">
           {clients.slice(0, 7).map((logo, idx) => (
-            <img
+            <Image
               key={idx}
               src={logo}
               alt={`Client ${idx + 1}`}
               className="object-contain w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] rounded-md drop-shadow-md"
+              width={90}
+              height={90}
               loading="lazy"
             />
           ))}
@@ -55,21 +58,25 @@ const ClientsSection: React.FC = () => {
         {/* Row 2: 3 logos, Our Clients, 3 logos */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-10 w-full">
           {clients.slice(7, 10).map((logo, idx) => (
-            <img
+            <Image
               key={7+idx}
               src={logo}
               alt={`Client ${7+idx + 1}`}
               className="object-contain w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] rounded-md drop-shadow-md"
+              width={90}
+              height={90}
               loading="lazy"
             />
           ))}
           <span className="mx-2 sm:mx-8 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 text-center drop-shadow-lg whitespace-nowrap">Our Clients</span>
           {clients.slice(10, 13).map((logo, idx) => (
-            <img
+            <Image
               key={10+idx}
               src={logo}
               alt={`Client ${10+idx + 1}`}
               className="object-contain w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] rounded-md drop-shadow-md"
+              width={90}
+              height={90}
               loading="lazy"
             />
           ))}
@@ -77,11 +84,13 @@ const ClientsSection: React.FC = () => {
         {/* Row 3: 7 logos */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-10 w-full">
           {clients.slice(13, 20).map((logo, idx) => (
-            <img
+            <Image
               key={13+idx}
               src={logo}
               alt={`Client ${13+idx + 1}`}
               className="object-contain w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] rounded-md drop-shadow-md"
+              width={90}
+              height={90}
               loading="lazy"
             />
           ))}

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const team = [
   {
@@ -40,10 +41,12 @@ export default function MeetTheTeam() {
             <div key={member.name} className="flex flex-col items-center h-[400px]">
               {/* Image Card */}
               <div className="bg-white w-[252px] h-[300px] rounded-xl overflow-hidden flex items-center justify-center">
-                <img
+                <Image
                   src={member.img}
                   alt={member.name}
                   className="w-full h-full object-cover"
+                  width={252}
+                  height={300}
                   loading="lazy"
                   style={{ display: 'block' }}
                 />
