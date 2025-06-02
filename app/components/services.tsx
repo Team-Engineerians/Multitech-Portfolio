@@ -40,14 +40,14 @@ export default function WhatWeDo() {
   return (
     <div className="font-sans text-gray-800">
       {/* What We Do Section */}
-      <section className="h-[710px] w-screen bg-[#565656] flex flex-col justify-start relative pl-[100px] pt-[48px] pb-[32px]">
+      <section className="h-[710px] w-screen bg-[#565656] flex flex-col justify-start relative pl-[4vw] pr-[4vw] pt-8 pb-8 sm:pl-[100px] sm:pr-0 sm:pt-[48px] sm:pb-[32px]">
         <div className="relative z-10 flex flex-col h-full w-full p-0 m-0">
-          <h2 className="text-white text-3xl font-normal mb-8 text-left">What we do</h2>
-          <div className="flex flex-row w-full h-full items-stretch justify-stretch gap-x-[24px] overflow-x-auto hide-scrollbar p-0 m-0 relative z-10" style={{minHeight: '0'}}>
+          <h2 className="text-white text-2xl sm:text-3xl font-normal mb-6 sm:mb-8 text-left">What we do</h2>
+          <div className="flex flex-row w-full h-full items-stretch justify-stretch gap-x-4 sm:gap-x-[24px] overflow-x-auto hide-scrollbar p-0 m-0 relative z-10 min-h-0">
             {services.map((service, i) => (
               <div
                 key={i}
-                className={`flex-shrink-0 w-[350px] lg:w-1/5 h-full rounded-xl flex flex-col justify-between p-8 relative overflow-hidden ${i === 0 ? 'ml-[0px]' : ''} ${i === services.length - 1 ? 'mr-[100px]' : ''}`}
+                className={`flex-shrink-0 w-[80vw] max-w-[350px] sm:w-[350px] lg:w-1/5 h-full rounded-xl flex flex-col justify-between p-4 sm:p-8 relative overflow-hidden ${i === 0 ? 'ml-0 sm:ml-[0px]' : ''} ${i === services.length - 1 ? 'mr-0 sm:mr-[100px]' : ''}`}
                 style={{
                   backgroundImage: `url('/worldmapscroll.svg')`,
                   backgroundSize: `${TOTAL_MAP_WIDTH}px ${CARD_HEIGHT}px`,
@@ -58,10 +58,10 @@ export default function WhatWeDo() {
               >
                 <div className="relative z-10 h-full flex flex-col justify-between">
                   <div>
-                    <h3 className="text-white text-2xl font-semibold mb-8 leading-snug">{service.title}</h3>
+                    <h3 className="text-white text-lg sm:text-2xl font-semibold mb-4 sm:mb-8 leading-snug">{service.title}</h3>
                   </div>
                   <div className="flex flex-col items-end justify-end h-full">
-                    <p className="text-white text-base font-normal leading-relaxed mt-auto mb-2 text-right">{service.desc}</p>
+                    <p className="text-white text-sm sm:text-base font-normal leading-relaxed mt-auto mb-2 text-right">{service.desc}</p>
                   </div>
                 </div>
               </div>

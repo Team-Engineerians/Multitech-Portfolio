@@ -58,17 +58,38 @@ const HeroSection = () => {
           priority
         />
       )}
-
-      {/* Hero Content */}
-      <div className="relative z-30 flex flex-col items-start justify-center h-full pl-[30vw] pt-[8vh]" style={{ minHeight: '100vh' }}>
-        <div className="mb-8 mt-8">
-          <span className="text-[#e3d7a2] text-[32px] font-normal leading-tight block">Multi Tech<br />Testing and Training</span>
+      {/* Dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/60 z-20" />
+      {/* Mobile Hero Content */}
+      <div className="block md:hidden relative z-30 w-full h-full pt-[90px] px-4 flex flex-col h-full justify-between">
+        {/* Top text */}
+        <div className="mt-8">
+          <span className="block text-[#e3d7a2] text-xs font-normal leading-tight mb-8 text-left">Multi Tech<br />Testing and Training</span>
         </div>
-        <h1 className="text-white text-[42px] md:text-[60px] lg:text-[64px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px]" style={{letterSpacing: '-1.5px'}}>
+        {/* Main headline */}
+        <div>
+          <h1 className="text-white text-2xl font-bold leading-[1.15] mb-8 max-w-full text-left">
+            Skilled manpower for<br />every need, across the<br />globe.
+          </h1>
+        </div>
+        {/* Bottom text */}
+        <div className="mb-8">
+          <p className="text-[#e3d7a2] text-xs font-normal leading-tight text-left">
+            Trusted overseas recruitment firm<br />
+            licensed by the Ministry of External Affairs, India.
+          </p>
+        </div>
+      </div>
+      {/* Tablet/Desktop Hero Content (unchanged) */}
+      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pl-[10vw] pt-[8vh] lg:pl-[30vw] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
+        <div className="mb-8 mt-8">
+          <span className="text-[#e3d7a2] text-2xl md:text-[32px] font-normal leading-tight block text-left">Multi Tech<br />Testing and Training</span>
+        </div>
+        <h1 className="text-white text-4xl md:text-[42px] lg:text-[60px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px] text-left" style={{letterSpacing: '-1.5px'}}>
           Skilled manpower for<br />every need, across the<br />globe.
         </h1>
         <div className="mt-8 pt-6 w-full max-w-[600px]">
-          <p className="text-[#e3d7a2] text-[18px] font-normal leading-tight">
+          <p className="text-[#e3d7a2] text-base md:text-[18px] font-normal leading-tight">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
           </p>
