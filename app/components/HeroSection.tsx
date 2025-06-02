@@ -81,14 +81,16 @@ const HeroSection = () => {
         </div>
       </div>
       {/* Tablet/Desktop Hero Content (unchanged) */}
-      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pl-[10vw] pt-[8vh] lg:pl-[30vw] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
-        <div className="mb-8 mt-8">
+      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pl-[4vw] pt-[8vh] lg:pl-[12vw] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
+        <div className="mb-8 mt-8 pl-4 border-l-4 border-yellow-400">
           <span className="text-[#e3d7a2] text-2xl md:text-[32px] font-normal leading-tight block text-left">Multi Tech<br />Testing and Training</span>
         </div>
-        <h1 className="text-white text-4xl md:text-[42px] lg:text-[60px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px] text-left" style={{letterSpacing: '-1.5px'}}>
-          Skilled manpower for<br />every need, across the<br />globe.
-        </h1>
-        <div className="mt-8 pt-6 w-full max-w-[600px]">
+        <div className="pl-4 border-l-4 border-yellow-400">
+          <h1 className="text-white text-4xl md:text-[42px] lg:text-[60px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px] text-left" style={{letterSpacing: '-1.5px'}}>
+            Skilled manpower for<br />every need, across the<br />globe.
+          </h1>
+        </div>
+        <div className="mt-8 pt-6 w-full max-w-[600px] pl-4 border-l-4 border-yellow-400">
           <p className="text-[#e3d7a2] text-base md:text-[18px] font-normal leading-tight">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
