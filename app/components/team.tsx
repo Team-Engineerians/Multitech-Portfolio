@@ -17,7 +17,7 @@ const team = [
   },
   {
     name: "Aditi Srivastava",
-    title: "Business Development Manager",
+    title: "BD Manager",
     bio: "Driving growth through strategic partnerships and innovative outreach.",
     img: "/images/aditi.jpg",
   },
@@ -25,51 +25,35 @@ const team = [
 
 export default function MeetTheTeam() {
   return (
-    <section className="w-screen bg-[#E1ECF7] py-8 md:py-12 lg:py-16 min-h-screen">
-      {/* Content Container */}
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <section className="w-screen bg-[#EFF0F1] py-12 md:py-16 lg:py-20 min-h-screen flex flex-col items-center justify-center">
+      <div className="w-full max-w-4xl mx-auto px-4 md:px-0">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-10 lg:mb-12">
-          <h2 className="text-3xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
-            Meet the Team
-          </h2>
-          <p className="mt-2 text-base md:text-lg text-gray-600">
-            Leadership That Drives Excellence
+        <div className="mb-10 text-left">
+          <h2 className="text-2xl md:text-2xl lg:text-2xl font-semibold text-black mb-4">About Us & Leadership</h2>
+          <p className="text-base md:text-lg text-black font-normal max-w-3xl">
+            Trusted overseas manpower recruitment firm since 2009, licensed by the Ministry of External Affairs, Govt. of India (Lic. No. B-1458/JP/PER/100+/5/9908/2021). Headquartered in New Delhi with a branch in Gorakhpur, we source skilled, semi-skilled, and unskilled talent across borders offering workforce solutions for global success.
           </p>
         </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+        {/* Team Cards */}
+        <div className="flex flex-row justify-center items-start gap-12 w-full mt-8">
           {team.map((member) => (
-            <div 
-              key={member.name} 
-              className="flex flex-col items-center mx-auto w-full max-w-[300px] md:max-w-[262px]"
+            <div
+              key={member.name}
+              className="bg-white flex flex-col items-center w-[252px] h-[355px] p-0"
+              style={{ boxSizing: 'border-box' }}
             >
-              {/* Image container */}
-              <div className="bg-white rounded-lg w-full h-[280px] md:h-[300px] lg:h-[312px] overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-
+              {/* Image */}
+              <img
+                src={member.img}
+                alt={member.name}
+                className="w-[252px] h-[315px] object-cover object-top"
+                loading="lazy"
+                style={{ display: 'block' }}
+              />
               {/* Name & Title */}
-              <div className="mt-4 md:mt-6">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-800">
-                  {member.name}
-                </h3>
-                <p className="text-sm md:text-md text-gray-500 mt-1 mb-2">
-                  {member.title}
-                </p>
-              </div>
-
-              {/* Bio */}
-              <div className="w-full md:w-[232px] px-4 md:px-0">
-                <p className="text-base md:text-lg text-blue-600 text-center">
-                  {member.bio}
-                </p>
+              <div className="w-full text-center mt-2">
+                <h3 className="text-base font-bold text-black mb-1">{member.name}</h3>
+                <p className="text-sm text-gray-400 font-normal">{member.title}</p>
               </div>
             </div>
           ))}
