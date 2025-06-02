@@ -37,8 +37,8 @@ export default function Gallery() {
       </div>
 
       {/* Rows with infinite scroll */}
-      <div className="space-y-4 md:space-y-6 lg:space-y-8">
-        {[0, 1, 2].map((idx) => {
+      <div className="space-y-6 md:space-y-8 lg:space-y-10">
+        {[0, 1].map((idx) => {
           const isEven = idx % 2 === 0;
           
           return (
@@ -54,7 +54,7 @@ export default function Gallery() {
                   {[...makeRow('desktop'), ...makeRow('desktop')].map(({ color, width }, i) => (
                     <div
                       key={`desktop-${i}`}
-                      className={`${colorClassMap[color]} h-[175px] rounded-lg flex-shrink-0 transition-all duration-300`}
+                      className={`${colorClassMap[color]} h-[260px] rounded-lg flex-shrink-0 transition-all duration-300`}
                       style={{ width: `${width}px` }}
                     />
                   ))}
@@ -65,7 +65,7 @@ export default function Gallery() {
                   {[...makeRow('tablet'), ...makeRow('tablet')].map(({ color, width }, i) => (
                     <div
                       key={`tablet-${i}`}
-                      className={`${colorClassMap[color]} h-[150px] rounded-lg flex-shrink-0 transition-all duration-300`}
+                      className={`${colorClassMap[color]} h-[180px] rounded-lg flex-shrink-0 transition-all duration-300`}
                       style={{ width: `${width}px` }}
                     />
                   ))}
