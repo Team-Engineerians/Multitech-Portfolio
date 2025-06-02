@@ -61,20 +61,20 @@ const HeroSection = () => {
       {/* Dark overlay for contrast */}
       <div className="absolute inset-0 bg-black/60 z-20" />
       {/* Mobile Hero Content */}
-      <div className="block md:hidden relative z-30 w-full h-full pt-[90px] px-4 flex flex-col h-full justify-between">
-        {/* Top text */}
-        <div className="mt-8">
-          <span className="block text-[#e3d7a2] text-xs font-normal leading-tight mb-8 text-left">Multi Tech<br />Testing and Training</span>
+      <div className="block md:hidden relative z-30 w-full h-full pt-[180px] px-4 flex flex-col justify-start">
+        {/* Subheadline */}
+        <div className="mt-8 pl-4 border-l-4 border-yellow-400">
+          <span className="block text-[#e3d7a2] text-lg font-normal leading-tight mb-6 text-left">Multi Tech<br />Testing and Training</span>
         </div>
         {/* Main headline */}
-        <div>
-          <h1 className="text-white text-2xl font-bold leading-[1.15] mb-8 max-w-full text-left">
+        <div className="mt-18 pl-4 border-l-4 border-yellow-400">
+          <h1 className="text-white text-4xl font-semibold leading-[1.15] mb-4 max-w-full text-left">
             Skilled manpower for<br />every need, across the<br />globe.
           </h1>
         </div>
-        {/* Bottom text */}
-        <div className="mb-8">
-          <p className="text-[#e3d7a2] text-xs font-normal leading-tight text-left">
+        {/* Supporting line */}
+        <div className="mt-48 pl-4 border-l-4 border-yellow-400">
+          <p className="text-[#e3d7a2] text-sm font-normal leading-tight text-left">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
           </p>
