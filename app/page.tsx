@@ -49,10 +49,10 @@ export default function Home() {
 
       <WhatWeDo />
       <RoleSpecialization />
-      <Gallery />
       <TheTeam />
-      <ClientsSection />
+      <Gallery />
       <TestimonialsSection />
+      <ClientsSection />
       <Footer />
     </div>
   );

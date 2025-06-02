@@ -27,11 +27,11 @@ function makeRow(screenSize: keyof typeof WIDTHS) {
 
 export default function Gallery() {
   return (
-    <section className="w-full bg-gray-900 text-white overflow-hidden py-8 md:py-12 lg:py-16">
+    <section className="w-full bg-white text-white overflow-hidden py-8 md:py-12 lg:py-16">
       {/* Header */}
-      <div className="w-full text-center mb-8 md:mb-10 lg:mb-12 px-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Our Gallery</h2>
-        <p className="mt-2 text-sm md:text-base text-gray-300">
+      <div className="w-full text-left mb-8 md:mb-10 lg:mb-12 px-4 ml-8 md:ml-12">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black">Our Gallery</h2>
+        <p className="mt-2 text-sm md:text-base text-black">
           A glimpse into our global workforce and operations.
         </p>
       </div>

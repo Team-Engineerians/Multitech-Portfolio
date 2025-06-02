@@ -23,48 +23,69 @@ const clients = [
   "/Frame292.png",
 ];
 
+const aspectRatio = 2; // width:height ratio for world map
+
 const ClientsSection: React.FC = () => {
   return (
-    <section className="w-screen bg-white py-12 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-8 md:mb-10 lg:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800">
-            Our Clients
-          </h2>
+    <section
+      className="w-screen min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center relative overflow-hidden pt-12 px-8 md:px-20 pb-8"
+      style={{
+        aspectRatio: `${aspectRatio}/1`,
+        background: `url('/worldmapscroll.svg') center center / 900px auto no-repeat`,
+        minHeight: '400px',
+        height: 'calc(100vw / 2)', // maintain 2:1 aspect ratio
+        maxHeight: '90vh',
+      }}
+    >
+      {/* Overlay for better contrast and lighter map */}
+      <div className="absolute inset-0 bg-white opacity-60 z-0 pointer-events-none" />
+      <div className="relative w-full h-full max-w-[1600px] mx-auto flex flex-col items-center justify-center z-10 gap-20 px-2">
+        {/* Row 1: 7 logos */}
+        <div className="flex flex-row justify-center items-center gap-20 w-full">
+          {clients.slice(0, 7).map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo}
+              alt={`Client ${idx + 1}`}
+              className="object-contain w-[90px] h-[90px] rounded-md drop-shadow-md"
+              loading="lazy"
+            />
+          ))}
         </div>
-
-        {/* Logo grid container */}
-        <div className="w-full max-w-[764px] mx-auto overflow-hidden px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
-            {clients.map((logo, index) => (
-              <div
-                key={index}
-                className="aspect-square flex items-center justify-center p-2 md:p-3 lg:p-4 bg-white rounded-lg transition-transform duration-300 hover:scale-105"
-              >
-                <div className="relative w-full h-full">
-                  <img
-                    src={logo}
-                    alt={`Client ${index + 1}`}
-                    className="object-contain w-full h-full"
-                    loading="lazy"
-                    style={{
-                      maxWidth: "100%",
-                      maxHeight: "100%",
-                      width: "auto",
-                      height: "auto",
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Row 2: 3 logos, Our Clients, 3 logos */}
+        <div className="flex flex-row justify-center items-center gap-20 w-full">
+          {clients.slice(7, 10).map((logo, idx) => (
+            <img
+              key={7+idx}
+              src={logo}
+              alt={`Client ${7+idx + 1}`}
+              className="object-contain w-[90px] h-[90px] rounded-md drop-shadow-md"
+              loading="lazy"
+            />
+          ))}
+          <span className="mx-12 text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 text-center drop-shadow-lg whitespace-nowrap">Our Clients</span>
+          {clients.slice(10, 13).map((logo, idx) => (
+            <img
+              key={10+idx}
+              src={logo}
+              alt={`Client ${10+idx + 1}`}
+              className="object-contain w-[90px] h-[90px] rounded-md drop-shadow-md"
+              loading="lazy"
+            />
+          ))}
         </div>
-
-        {/* Footer text */}
-        <p className="text-center mt-8 md:mt-10 lg:mt-12 text-base md:text-lg text-gray-800">
-          and many more...
-        </p>
+        {/* Row 3: 7 logos */}
+        <div className="flex flex-row justify-center items-center gap-20 w-full">
+          {clients.slice(13, 20).map((logo, idx) => (
+            <img
+              key={13+idx}
+              src={logo}
+              alt={`Client ${13+idx + 1}`}
+              className="object-contain w-[90px] h-[90px] rounded-md drop-shadow-md"
+              loading="lazy"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

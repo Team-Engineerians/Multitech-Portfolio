@@ -1,5 +1,4 @@
 import React from "react";
-import { GlobeDemo } from "./globeDemo";
 
 const services = [
   {
@@ -67,86 +66,6 @@ export default function WhatWeDo() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Vision + Globe + Mission Section */}
-      <section className="w-screen bg-white 
-                         min-h-screen 
-                         py-12 lg:py-0 
-                         relative">
-        <div className="max-w-7xl mx-auto h-full">
-          {/* Desktop Layout */}
-          <div className="hidden lg:flex flex-col h-screen relative">
-            {/* Vision - Top Left */}
-            <div className="absolute top-24 left-8 
-                           max-w-[400px] 
-                           text-left 
-                           z-10">
-              <h2 className="text-3xl font-bold text-black mb-4">
-                Vision
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                To deliver unmatched quality through expert training and testing,
-                building futures rooted in skill and excellence.
-              </p>
-            </div>
-
-            {/* Centered Globe */}
-            <div className="flex-1 flex items-center justify-center">
-              <div className="w-[576px] h-[508px]">
-                <GlobeDemo />
-              </div>
-            </div>
-
-            {/* Mission - Bottom Right */}
-            <div className="absolute bottom-24 right-8 
-                           max-w-[400px] 
-                           text-right 
-                           z-10">
-              <h2 className="text-3xl font-bold text-black mb-4">
-                Mission
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                To create lasting impact through effective placements, value-added
-                services, and a focus on empowering people and industries alike.
-              </p>
-            </div>
-          </div>
-
-          {/* Mobile/Tablet Layout */}
-          <div className="lg:hidden flex flex-col items-center px-4">
-            {/* Vision */}
-            <div className="w-full max-w-[500px] text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-                Vision
-              </h2>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                To deliver unmatched quality through expert training and testing,
-                building futures rooted in skill and excellence.
-              </p>
-            </div>
-
-            {/* Centered Globe */}
-            <div className="w-full flex justify-center my-8">
-              <div className="w-[300px] h-[300px] 
-                             sm:w-[400px] sm:h-[400px] 
-                             md:w-[450px] md:h-[450px]">
-                <GlobeDemo />
-              </div>
-            </div>
-
-            {/* Mission */}
-            <div className="w-full max-w-[500px] text-center mt-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-                Mission
-              </h2>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                To create lasting impact through effective placements, value-added
-                services, and a focus on empowering people and industries alike.
-              </p>
-            </div>
           </div>
         </div>
       </section>
