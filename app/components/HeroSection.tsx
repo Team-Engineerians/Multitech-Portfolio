@@ -60,37 +60,42 @@ const HeroSection = () => {
       )}
       {/* Dark overlay for contrast */}
       <div className="absolute inset-0 bg-black/60 z-20" />
+      {/* Vertical lines */}
+      <div className="absolute top-0 left-[16vw] lg:left-[20vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
+      <div className="absolute top-0 right-[16vw] lg:right-[20vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
+      {/* Horizontal line */}
+      <div className="absolute bottom-[8vw] lg:bottom-[12vw] left-0 w-full h-[1px] bg-[#e3d7a2] z-30" />
       {/* Mobile Hero Content */}
-      <div className="block md:hidden relative z-30 w-full h-full pt-[180px] px-4 flex flex-col justify-start">
+      <div className="block md:hidden relative z-30 w-full h-full pt-[180px] px-12 flex flex-col justify-start">
         {/* Subheadline */}
-        <div className="mt-8 pl-4 border-l-4 border-yellow-400">
+        <div className="mt-8 pl-10">
           <span className="block text-[#e3d7a2] text-lg font-normal leading-tight mb-6 text-left">Multi Tech<br />Testing and Training</span>
         </div>
         {/* Main headline */}
-        <div className="mt-18 pl-4 border-l-4 border-yellow-400">
+        <div className="mt-18 pl-10">
           <h1 className="text-white text-4xl font-semibold leading-[1.15] mb-4 max-w-full text-left">
             Skilled manpower for<br />every need, across the<br />globe.
           </h1>
         </div>
         {/* Supporting line */}
-        <div className="mt-48 pl-4 border-l-4 border-yellow-400">
+        <div className="mt-48 pl-10">
           <p className="text-[#e3d7a2] text-sm font-normal leading-tight text-left">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
           </p>
         </div>
       </div>
-      {/* Tablet/Desktop Hero Content (unchanged) */}
-      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pl-[4vw] pt-[8vh] lg:pl-[12vw] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
-        <div className="mb-8 mt-8 pl-4 border-l-4 border-yellow-400">
+      {/* Tablet/Desktop Hero Content */}
+      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pl-[16vw] pt-[8vh] lg:pl-[24vw] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
+        <div className="mb-8 mt-8 pl-10">
           <span className="text-[#e3d7a2] text-2xl md:text-[32px] font-normal leading-tight block text-left">Multi Tech<br />Testing and Training</span>
         </div>
-        <div className="pl-4 border-l-4 border-yellow-400">
+        <div className="pl-10">
           <h1 className="text-white text-4xl md:text-[42px] lg:text-[60px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px] text-left" style={{letterSpacing: '-1.5px'}}>
             Skilled manpower for<br />every need, across the<br />globe.
           </h1>
         </div>
-        <div className="mt-8 pt-6 w-full max-w-[600px] pl-4 border-l-4 border-yellow-400">
+        <div className="mt-8 pt-6 w-full max-w-[600px] pl-10">
           <p className="text-[#e3d7a2] text-base md:text-[18px] font-normal leading-tight">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
