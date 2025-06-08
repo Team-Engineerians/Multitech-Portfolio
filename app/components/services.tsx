@@ -40,10 +40,14 @@ export default function WhatWeDo() {
   return (
     <div className="font-sans text-gray-800">
       {/* What We Do Section */}
-      <section className="h-[710px] w-screen bg-[#565656] flex flex-col justify-start relative pl-[4vw] pr-[4vw] pt-8 pb-8 sm:pl-[100px] sm:pr-0 sm:pt-[48px] sm:pb-[32px]">
+      <section className="h-[710px] w-screen bg-[#565656] flex flex-col justify-start relative">
         <div className="relative z-10 flex flex-col h-full w-full p-0 m-0">
-          <h2 className="text-white text-2xl sm:text-3xl font-normal mb-6 sm:mb-8 text-left">What we do</h2>
-          <div className="flex flex-row w-full h-full items-stretch justify-stretch gap-x-4 sm:gap-x-[24px] overflow-x-auto hide-scrollbar p-0 m-0 relative z-10 min-h-0">
+          <div className="pl-[4vw] pr-[4vw] pt-8 pb-8 sm:pl-[100px] sm:pr-0 sm:pt-[48px] sm:pb-[32px]">
+            <h2 className="text-white text-2xl sm:text-3xl font-normal mb-6 sm:mb-8 text-left">What we do</h2>
+          </div>
+          {/* Top horizontal line */}
+          <div className="absolute top-[200px] left-0 right-0 w-screen h-[1px] bg-[#e3d7a2] z-[5]" />
+          <div className="flex flex-row w-full h-full items-stretch justify-stretch gap-x-4 sm:gap-x-[24px] overflow-x-auto hide-scrollbar p-0 m-0 relative z-10 min-h-0 pl-[4vw] pr-[4vw] sm:pl-[100px] sm:pr-0 mb-16">
             {services.map((service, i) => (
               <div
                 key={i}
@@ -67,6 +71,8 @@ export default function WhatWeDo() {
               </div>
             ))}
           </div>
+          {/* Bottom horizontal line */}
+          <div className="absolute bottom-[4vw] lg:bottom-[6vw] left-0 right-0 w-screen h-[1px] bg-[#e3d7a2] z-[5]" />
         </div>
       </section>
     </div>
