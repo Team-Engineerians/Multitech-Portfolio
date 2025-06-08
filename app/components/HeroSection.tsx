@@ -37,8 +37,8 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative w-screen min-h-[100vh] flex items-stretch justify-start overflow-hidden z-[40]"
-      style={{ minHeight: '100dvh', width: '100vw' }}
+      className="relative w-screen min-h-[90vh] md:min-h-[100vh] flex items-stretch justify-start overflow-hidden z-[40]"
+      style={{ minHeight: '90dvh', width: '100vw' }}
     >
       {/* Current Image (always visible) */}
       <Image
@@ -61,41 +61,43 @@ const HeroSection = () => {
       {/* Dark overlay for contrast */}
       <div className="absolute inset-0 bg-black/60 z-20" />
       {/* Vertical lines */}
-      <div className="absolute top-0 left-[16vw] lg:left-[20vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
-      <div className="absolute top-0 right-[16vw] lg:right-[20vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
-      {/* Horizontal line */}
-      <div className="absolute bottom-[8vw] lg:bottom-[12vw] left-0 w-full h-[1px] bg-[#e3d7a2] z-30" />
+      <div className="absolute top-0 left-[7vw] lg:left-[16vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
+      <div className="absolute top-0 right-[7vw] lg:right-[16vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
       {/* Mobile Hero Content */}
-      <div className="block md:hidden relative z-30 w-full h-full pt-[180px] px-12 flex flex-col justify-start">
+      <div className="block md:hidden relative z-30 w-full h-full pt-[180px] px-6 pb-0 flex flex-col justify-start">
         {/* Subheadline */}
-        <div className="mt-8 pl-10">
+        <div className="mt-8 pl-6">
           <span className="block text-[#e3d7a2] text-lg font-normal leading-tight mb-6 text-left">Multi Tech<br />Testing and Training</span>
         </div>
         {/* Main headline */}
-        <div className="mt-18 pl-10">
-          <h1 className="text-white text-4xl font-semibold leading-[1.15] mb-4 max-w-full text-left">
+        <div className="mt-18 pl-6">
+          <h1 className="text-white text-3xl md:text-[42px] lg:text-[60px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-full text-left" style={{letterSpacing: '-1.5px'}}>
             Skilled manpower for<br />every need, across the<br />globe.
           </h1>
         </div>
         {/* Supporting line */}
-        <div className="mt-48 pl-10">
+        <div className="mt-48 pl-6">
           <p className="text-[#e3d7a2] text-sm font-normal leading-tight text-left">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
           </p>
         </div>
+        {/* Horizontal line just below supporting text */}
+        <div className="relative w-screen h-[1px] bg-[#e3d7a2] mt-6 left-1/2 -translate-x-1/2" />
       </div>
       {/* Tablet/Desktop Hero Content */}
-      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pl-[16vw] pt-[8vh] lg:pl-[24vw] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
-        <div className="mb-8 mt-8 pl-10">
+      <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pt-[8vh] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
+        <div className="mb-8 mt-8" style={{marginLeft: 'calc(20vw + 8px)'}}>
           <span className="text-[#e3d7a2] text-2xl md:text-[32px] font-normal leading-tight block text-left">Multi Tech<br />Testing and Training</span>
         </div>
-        <div className="pl-10">
+        <div style={{marginLeft: 'calc(20vw + 8px)'}}>
           <h1 className="text-white text-4xl md:text-[42px] lg:text-[60px] xl:text-[68px] 2xl:text-[72px] font-medium leading-[1.08] mb-8 max-w-[700px] text-left" style={{letterSpacing: '-1.5px'}}>
             Skilled manpower for<br />every need, across the<br />globe.
           </h1>
         </div>
-        <div className="mt-8 pt-6 w-full max-w-[600px] pl-10">
+        {/* Horizontal line just above supporting text for desktop/tablet */}
+        <div className="absolute left-0 w-screen h-[1px] bg-[#e3d7a2] z-40" style={{position: 'absolute', top: 'calc(100% - 120px)'}} />
+        <div className="mt-8 pt-6 w-full max-w-[600px]" style={{marginLeft: 'calc(20vw + 8px)'}}>
           <p className="text-[#e3d7a2] text-base md:text-[18px] font-normal leading-tight">
             Trusted overseas recruitment firm<br />
             licensed by the Ministry of External Affairs, India.
