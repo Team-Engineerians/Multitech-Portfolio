@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="w-screen lg:min-h-[554px] bg-[#EFF0F1] flex flex-col items-center py-4 pb-10 px-4 sm:px-0 md:px-0 -mx-4">
+    <section className="w-screen lg:min-h-[554px] bg-[#EFF0F1] flex flex-col items-center py-16 pb-10 px-4 sm:px-0 md:px-0 -mx-4">
       <div className="w-full max-w-4xl px-2 sm:px-4 md:px-8 lg:pl-16">
         {/* Heading and Bullets */}
         <div className="mb-8 sm:mb-10">
