@@ -11,6 +11,13 @@ const images = [
 
 const FADE_DURATION = 1500; // ms
 
+const lineColors = [
+  "#e3d7a2", // yellowish
+  "#d05c4e", // reddish
+  "#4a6173", // bluish
+  "#ffffff"  // white
+];
+
 const HeroSection = () => {
   const [bgIndex, setBgIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
@@ -61,8 +68,8 @@ const HeroSection = () => {
       {/* Dark overlay for contrast */}
       <div className="absolute inset-0 bg-black/60 z-20" />
       {/* Vertical lines */}
-      <div className="absolute top-0 left-[7vw] lg:left-[16vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
-      <div className="absolute top-0 right-[7vw] lg:right-[16vw] h-full w-[1px] bg-[#e3d7a2] z-30" />
+      <div className="absolute top-0 left-[7vw] md:left-[12vw] lg:left-[16vw] h-full w-[1px] z-30 transition-colors duration-700" style={{backgroundColor: lineColors[bgIndex % 4]}} />
+      <div className="absolute top-0 right-[7vw] md:right-[12vw] lg:right-[16vw] h-full w-[1px] z-30 transition-colors duration-700" style={{backgroundColor: lineColors[bgIndex % 4]}} />
       {/* Mobile Hero Content */}
       <div className="block md:hidden relative z-30 w-full h-full pt-[180px] px-6 pb-0 flex flex-col justify-start">
         {/* Subheadline */}
@@ -83,7 +90,7 @@ const HeroSection = () => {
           </p>
         </div>
         {/* Horizontal line just below supporting text */}
-        <div className="relative w-screen h-[1px] bg-[#e3d7a2] mt-6 left-1/2 -translate-x-1/2" />
+        <div className="relative w-screen h-[1px] mt-6 left-1/2 -translate-x-1/2 transition-colors duration-700" style={{backgroundColor: lineColors[bgIndex % 4]}} />
       </div>
       {/* Tablet/Desktop Hero Content */}
       <div className="hidden md:flex relative z-30 flex-col items-start justify-center h-full pt-[8vh] lg:pt-[8vh]" style={{ minHeight: '100vh' }}>
@@ -96,7 +103,7 @@ const HeroSection = () => {
           </h1>
         </div>
         {/* Horizontal line just above supporting text for desktop/tablet */}
-        <div className="absolute left-0 w-screen h-[1px] bg-[#e3d7a2] z-40" style={{position: 'absolute', top: 'calc(100% - 120px)'}} />
+        <div className="absolute left-0 w-screen h-[1px] z-40 transition-colors duration-700" style={{position: 'absolute', top: 'calc(100% - 120px)', backgroundColor: lineColors[bgIndex % 4]}} />
         <div className="mt-8 pt-6 w-full max-w-[600px]" style={{marginLeft: 'calc(20vw + 8px)'}}>
           <p className="text-[#e3d7a2] text-base md:text-[18px] font-normal leading-tight">
             Trusted overseas recruitment firm<br />
